@@ -55,7 +55,7 @@ export default class Gallery extends Component {
     const { images } = this.props
 
     const pics = images.map(pic => {
-      return { src: pic }
+      return { src: pic.data.thumbnail }
     })
 
     if (!pics) return
@@ -77,16 +77,16 @@ export default class Gallery extends Component {
   }
 
   render() {
+    // {this.props.heading && <h2>{this.props.heading}</h2>}
+    // {this.props.subheading && <p>{this.props.subheading}</p>}
     return (
       <div className="section">
-        {this.props.heading && <h2>{this.props.heading}</h2>}
-        {this.props.subheading && <p>{this.props.subheading}</p>}
         {this.renderGallery()}
         <Lightbox
           className={this.props.clName}
           currentImage={this.state.currentImage}
           images={this.props.images.map(pic => {
-            src: pic
+            src: pic.data.thumbnail
           })}
           isOpen={this.state.lightboxIsOpen}
           onClickImage={this.handleClickImage}
@@ -102,12 +102,12 @@ export default class Gallery extends Component {
 }
 
 Gallery.displayName = 'Gallery'
-Gallery.propTypes = {
-  heading: PropTypes.string,
-  images: PropTypes.array,
-  showThumbnails: PropTypes.bool,
-  subheading: PropTypes.string,
-}
+// Gallery.propTypes = {
+//   heading: PropTypes.string,
+//   images: PropTypes.array,
+//   showThumbnails: PropTypes.bool,
+//   subheading: PropTypes.string,
+// }
 
 const gutter = {
   small: 2,

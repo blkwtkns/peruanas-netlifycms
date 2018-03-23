@@ -54,8 +54,8 @@ export default {
   }),
   getRoutes: async () => {
     const presentations = await getPosts('presentations')
-    // const logos = await getPosts('logos')
-    // const images = await getPosts('home')
+    const logos = await getPosts('logos')
+    const images = await getPosts('home')
     // const dancers = await getPosts('dancers')
     // const dances = await getPosts('dances')
     // const photos = await getPosts('photos')
@@ -64,10 +64,9 @@ export default {
       {
         path: '/',
         component: 'src/components/Home/Home',
-        // getData: () => ({
-        //   logos,
-        //   images,
-        // }),
+        getData: () => ({
+          images,
+        }),
       },
       {
         path: '/history',
@@ -97,14 +96,6 @@ export default {
         }),
       },
       // {
-      //   path: '/',
-      //   component: 'src/containers/Home',
-      // },
-      // {
-      //   path: '/about',
-      //   component: 'src/containers/About',
-      // },
-      // {
       //   path: '/blog',
       //   component: 'src/containers/Blog',
       //   getData: () => ({
@@ -120,7 +111,7 @@ export default {
       // },
       {
         is404: true,
-        component: 'src/containers/404',
+        component: 'src/components/404',
       },
     ]
   },

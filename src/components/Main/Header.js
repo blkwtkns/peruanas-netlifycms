@@ -1,13 +1,11 @@
 import React from 'react'
-import NavBrand from './NavBrand'
 import RouteLinks from './RouteLinks'
 import SocialLinks from './SocialLinks'
 import { Link } from 'react-static'
 
 export default props => (
   <header id="header">
-    { /* <h1 id="logo"><a href="index.html">Landed</a></h1> */ }
-
+    <img src={props.logo} className={"raicesLogo"}/>
     <h1 className="logo"><Link to="/">Raices Peruanas</Link></h1>
     <nav id="nav">
       <ul>
@@ -54,15 +52,3 @@ export default props => (
     </nav>
   </header>
 )
-
-// export default props => {
-//   return (
-//     <nav>
-//       <NavBrand />
-//       <ul className="right">
-//         <RouteLinks />
-//         <SocialLinks />
-//       </ul>
-//     </nav>
-//   )
-// }
