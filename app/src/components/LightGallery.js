@@ -113,6 +113,7 @@ const gutter = {
   small: 2,
   large: 4,
 }
+
 const classes = StyleSheet.create({
   gallery: {
     marginRight: -gutter.small,

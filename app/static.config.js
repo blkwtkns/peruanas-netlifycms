@@ -54,7 +54,8 @@ export default {
   }),
   getRoutes: async () => {
     const presentations = await getPosts('presentations')
-    // const logos = await getPosts('logos')
+    const logos = await getPosts('logos')
+    const images = await getPosts('home')
     // const dancers = await getPosts('dancers')
     // const dances = await getPosts('dances')
     // const photos = await getPosts('photos')
@@ -63,6 +64,10 @@ export default {
       {
         path: '/',
         component: 'src/components/Home/Home',
+        getData: () => ({
+          logos,
+          images,
+        }),
       },
       {
         path: '/history',
