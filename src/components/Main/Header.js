@@ -13,7 +13,8 @@ export default props => (
         <li><Link to="/dances">Dances</Link></li>
         <li><Link to="/history">History</Link></li>
         <li><Link to="/contact">Contact</Link></li>
-        <li>
+        <li><Link to="/dancers">Dancers</Link></li>
+        {/* <li>
           <a href="#">Social</a>
           <ul className="socialLinks">
             <li><a className="fa fa-phone fa-lg socials" href="tel:6266640944" /></li>
@@ -31,7 +32,7 @@ export default props => (
               href="https://www.facebook.com/danzas.peruanas"
             /></li>
           </ul>
-        </li>
+        </li> */}
           { /*
             <li>
               <a href="#">Submenu</a>

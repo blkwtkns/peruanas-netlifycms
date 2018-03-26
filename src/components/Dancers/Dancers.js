@@ -1,15 +1,19 @@
-// ./src/components/Dancers.js
 import React from 'react'
-import { Jumbotron, PageHeader } from 'react-bootstrap'
-/* import DancersCarousel from './DancersCarousel'; */
-import ImageCarousel from '../ImageCarousel'
-import { dancers } from '../../constants/photoState'
+import { withRouteData, Link } from 'react-static'
 
-export default props => (
+export default withRouteData(({ dancers }) => (
   <section className="dancersSection">
-    <Jumbotron className="dancers">
-      <PageHeader>Dancers of Raices Peruanas</PageHeader>
-      <ImageCarousel images={dancers} />
-    </Jumbotron>
+    <h1>Dancers of Raices Peruanas</h1>
+    <br />
+    <ul>
+      {dancers.map(dancer => (
+        <li key={dancer.data.slug}>
+          <Link to={`/dancers/dancer/${dancer.data.slug}`}>
+            <img src={dancer.data.thumbnail} />
+            {dancer.data.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
   </section>
-)
+))

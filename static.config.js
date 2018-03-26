@@ -56,7 +56,7 @@ export default {
     const presentations = await getPosts('presentations')
     const logos = await getPosts('logos')
     const images = await getPosts('home')
-    // const dancers = await getPosts('dancers')
+    const dancers = await getPosts('dancers')
     // const dances = await getPosts('dances')
     // const photos = await getPosts('photos')
     // const history = await getPosts('history')
@@ -76,20 +76,20 @@ export default {
         path: '/dances',
         component: 'src/components/Dances/Dances',
       },
-      // {
-      //   path: '/dancers',
-      //   component: 'src/components/Dancers/Dancers',
-      //   getData: () => ({
-      //     dancers,
-      //   }),
-      //   children: dancers.map(dancer => ({
-      //     path: `/dancer/${dancer.data.slug}`,
-      //     component: 'src/components/dancers/dancer',
-      //     getData: () => ({
-      //       dancer,
-      //     }),
-      //   })),
-      // },
+      {
+        path: '/dancers',
+        component: 'src/components/Dancers/Dancers',
+        getData: () => ({
+          dancers,
+        }),
+        children: dancers.map(dancer => ({
+          path: `/dancer/${dancer.data.slug}`,
+          component: 'src/components/Dancers/Dancer',
+          getData: () => ({
+            dancer,
+          }),
+        })),
+      },
       // {
       //   path: '/photos',
       //   component: 'src/components/Photos/Photos',
