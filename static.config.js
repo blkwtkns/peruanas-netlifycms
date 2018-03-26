@@ -79,6 +79,16 @@ export default {
       // {
       //   path: '/dancers',
       //   component: 'src/components/Dancers/Dancers',
+      //   getData: () => ({
+      //     dancers,
+      //   }),
+      //   children: dancers.map(dancer => ({
+      //     path: `/dancer/${dancer.data.slug}`,
+      //     component: 'src/components/dancers/dancer',
+      //     getData: () => ({
+      //       dancer,
+      //     }),
+      //   })),
       // },
       // {
       //   path: '/photos',

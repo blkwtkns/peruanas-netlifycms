@@ -22,7 +22,7 @@ collections:
   #     - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "presentations" # Used in routes, e.g., /admin/collections/blog
-    label: "Presentations" # Used in the UI
+    label: "Presentation" # Used in the UI
     folder: "src/matter/presentations" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -39,7 +39,7 @@ collections:
       - {label: "About", name: "about", widget: "markdown"}
 
   - name: "photos" # Used in routes, e.g., /admin/collections/blog
-    label: "Photos" # Used in the UI
+    label: "Photo" # Used in the UI
     folder: "src/matter/photos" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -53,7 +53,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "logos" # Used in routes, e.g., /admin/collections/blog
-    label: "Logos" # Used in the UI
+    label: "Logo" # Used in the UI
     folder: "src/matter/logos" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -65,7 +65,7 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
 
   - name: "dancers" # Used in routes, e.g., /admin/collections/blog
-    label: "Dancers" # Used in the UI
+    label: "Dancer" # Used in the UI
     folder: "src/matter/dancers" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md

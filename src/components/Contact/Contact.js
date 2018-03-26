@@ -1,24 +1,17 @@
-// ./src/components/Contact.js
-// https://jsonplaceholder.typicode.com/
 import React, { Component } from 'react'
-import {
-  Checkbox,
-  FormGroup,
-  ControlLabel,
-  FormControl,
-  Button,
-} from 'react-bootstrap'
-import FieldGroup from './FieldGroup'
 import Notify from './NotifySubmission'
 import { connect } from 'react-redux'
 import * as types from '../../constants/actionTypes.js'
 import putFormAction from './contactActions'
 
-/* import './../styles/Contact.css'; */
-
 class Contact extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      nameInput: "",
+      emailInput: "",
+      textInput: ""
+    };
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
   }
 
@@ -32,9 +25,14 @@ class Contact extends Component {
     this.props.submitForm(input)
   }
 
-  render() {
-    /* console.log('contact component', this.props) */
+  handleInputState(event, type) {
+    console.log('see event and type', event, type);
+    let update = {};
+    update[type] = event.target.value;
+    this.setState(update);
+  }
 
+  render() {
     return (
       <section className="contactSection">
         <div className="reqHeadline">
@@ -43,57 +41,70 @@ class Contact extends Component {
             book a performance.
           </h1>
         </div>
-        <form>
-          <FieldGroup
-            id="formControlsName"
-            type="text"
-            label="Name"
-            placeholder="Enter name"
-            inputRef={ref => {
-              this.nameInput = ref
-            }}
-          />
-          <FieldGroup
-            id="formControlsEmail"
-            type="email"
-            label="Email address"
-            placeholder="Enter email"
-            inputRef={ref => {
-              this.emailInput = ref
-            }}
-          />
-
-          <h3>Check all that apply please:</h3>
-
-          <FormGroup>
-            <Checkbox inline>General Info</Checkbox>{' '}
-            <Checkbox inline>Booking</Checkbox>{' '}
-            <Checkbox inline>Pricing</Checkbox>
-            <Checkbox inline>Feedback</Checkbox>
-          </FormGroup>
-
-          <FormGroup controlId="formControlsTextarea">
-            <ControlLabel>Textarea</ControlLabel>
-            <FormControl
-              className="textarea"
-              inputRef={ref => {
-                this.textInput = ref
-              }}
-              componentClass="textarea"
-              placeholder="Please leave your feedback or any further request info here"
-            />
-          </FormGroup>
-
-          <Button type="submit" onClick={this.handleFormSubmit}>
-            Submit
-          </Button>
+        <form action="#">
+          <div className="row uniform 50%">
+            <div className="6u 12u$(xsmall)">
+              <input
+                type="text"
+                name="name"
+                className="name"
+                value={this.state.nameInput}
+                onChange={event => this.handleInputState(event, `nameInput`) }
+                placeholder="Name" />
+            </div>
+            <div className="6u$ 12u$(xsmall)">
+              <input
+                type="email"
+                name="email"
+                className="email"
+                placeholder="Email"
+                value={this.state.emailInput}
+                onChange={event => this.handleInputState(event, `emailInput`) } />
+            </div>
+            <div className="6u 12u$(medium)">
+              <input type="checkbox" className="contact-generalInfo" name="info"/>
+              <label htmlFor="info">General Info</label>
+            </div>
+            <div className="6u$ 12u$(medium)">
+              <input type="checkbox" className="contact-bookingInfo" name="booking"/>
+              <label htmlFor="booking">Booking</label>
+            </div>
+            <div className="6u 12u$(medium)">
+              <input type="checkbox" className="contact-pricingInfo" name="pricing"/>
+              <label htmlFor="pricing">Pricing</label>
+            </div>
+            <div className="6u 12u$(medium)">
+              <input type="checkbox" className="contact-feedbackInfo" name="feedback"/>
+              <label htmlFor="feedback">Feedback</label>
+            </div>
+            <div className="12u$ contact__text--container">
+              <textarea
+                className="textarea"
+                id="message"
+                placeholder="Please leave your feedback or any further request info here"
+                rows="6"
+                value={this.state.textInput}
+                onChange={event => this.handleInputState(event, `textInput`) } ></textarea>
+            </div>
+            <div className="12u$">
+              <ul className="actions">
+                <li>
+                  <input
+                    type="submit"
+                    value="Send Message"
+                    className="special"
+                    onClick={this.handleFormSubmit} />
+                </li>
+                <li><input type="reset" value="Reset" /></li>
+              </ul>
+            </div>
+          </div>
         </form>
 
         <Notify dbInfo={this.props.dbInfo} />
 
         <div className="committeeInfo">
           <h2>Committee Members</h2>
-
           <p>Director: Erbelia Espejo</p>
           <p>Sub-director: Ben Espejo</p>
           <p>Instructors: Oscar León</p>

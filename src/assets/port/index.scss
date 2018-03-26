@@ -152,6 +152,10 @@ body {
   }
 }
 
+.contact__text--container {
+  width: 100%;
+}
+
 /* Carousels */
 a.carousel-control.left, a.carousel-control.right {
   background: rgba(255, 255, 255, 0);
@@ -384,4 +388,3 @@ li > ul.drop-menu {
     top: 100%;
     width: 100%;
 }
-

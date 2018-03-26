@@ -18,21 +18,19 @@ import rootSaga from './sagas/rootSaga'
 const store = configureStore({})
 store.runSaga(rootSaga)
 
-// import './components/Main/main.css'
-// import 'font-awesome/css/font-awesome.min.css'
-
 import './assets/sass/main.scss'
 import logo from '../public/uploads/image1-small-23.png'
 
-// const App = () => (
 const App = () => (
   <Provider store={store} key="provider">
     <Router>
-      <section className="main-container">
+      <div className="main-container">
         <Header logo={logo}/>
-        <Routes />
+        <div id="main" className="wrapper style1">
+          <Routes />
+        </div>
         <Footer />
-      </section>
+      </div>
     </Router>
   </Provider>
 )
