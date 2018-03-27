@@ -26,9 +26,7 @@ const App = () => (
     <Router>
       <div className="main-container">
         <Header logo={logo}/>
-        <div id="main" className="wrapper style1">
-          <Routes />
-        </div>
+        <Routes />
         <Footer />
       </div>
     </Router>

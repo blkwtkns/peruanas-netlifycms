@@ -5,7 +5,7 @@ import Markdown from 'react-markdown'
 
 export default withRouteData(({ dancer }) => (
   <div className="dancer">
-    <Link to="/dancers/">{'<'} Back</Link>
+    <Link to="/dancers/">{'<'} Back to Dancers</Link>
     <br />
     <h3>{dancer.data.title}</h3>
     <img className="image" src={dancer.data.thumbnail} alt="" />
