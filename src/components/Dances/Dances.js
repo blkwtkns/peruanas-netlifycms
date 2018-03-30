@@ -4,6 +4,6 @@ import React from 'react'
 export default props => (
   // export default withRouteData(() => (
   <section className="dancesSection">
-      <iframe src="http://www.youtube.com/embed/?listType=user_uploads&list=RaicesPeruanas" />
+      <iframe className="dancesVideo" src="http://www.youtube.com/embed/?listType=user_uploads&list=RaicesPeruanas" />
   </section>
 )

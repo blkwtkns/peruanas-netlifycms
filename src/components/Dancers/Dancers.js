@@ -3,7 +3,7 @@ import { withRouteData, Link } from 'react-static'
 
 export default withRouteData(({ dancers }) => (
   <section className="dancersSection">
-    <h1>Dancers of Raices Peruanas</h1>
+    <h1 className="dancers--title">Dancers of Raices Peruanas</h1>
     <br />
     {dancers.map(( dancer, idx ) => {
       if ( idx === 0 ) {

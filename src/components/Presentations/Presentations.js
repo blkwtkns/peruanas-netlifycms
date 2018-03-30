@@ -35,7 +35,7 @@ export default withRouteData(({ presentations }) => (
       <h1 className="pres-header">Presentations</h1>
       <ul>
         {presentations.map((event, id) => (
-          <li key={id}>
+          <li key={id} className="presentation">
             {/*<Link to={`/blog/post/${post.data.slug}`}>{post.data.title}</Link>*/}
             <Event {...event.data} />
             <Separator />

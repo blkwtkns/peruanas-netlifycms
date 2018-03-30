@@ -24,13 +24,16 @@ body {
 }
 
 .Intro {
-  padding: 28% 0;
-  // height: 100vh;
-  // width: 100vw;
+  // padding: 28% 0;
+  height: 100vh;
   background: no-repeat top center url('../../../public/uploads/machu-picchu-inca-peru.jpeg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .Intro {
     padding: 80% 0;
     height: 53em;
@@ -47,22 +50,21 @@ body {
 }
 
 .introText {
-  margin: 15% auto;
-  // height: 50%;
   color: floralwhite;
 }
 
 .greyBox {
+  height: 20%;
   background: #3f3f3f;
   opacity: 0.8;
-  padding: 1% 0;
+  // padding: 10% 0;
   margin-right: 10%;
 
   .intro-title {
-    font-size: 5vw;
+    font-size: 4vw;
   }
   .intro-subtitle {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 }
 
@@ -93,7 +95,7 @@ body {
 /* Dances.css */
 .dancesSection {
   padding: 5% 15%;
-  min-height: calc(86vh);
+  min-height: calc(71vh);
 }
 
 @media only screen and (max-width: 768px) {
@@ -102,6 +104,11 @@ body {
     padding-top: 23%;
     padding-bottom: 69%;
   }
+}
+
+.dancesVideo {
+  width: 100%;
+  height: 70vh;
 }
 
 /*Photos*/
@@ -207,6 +214,11 @@ a.carousel-control.left, a.carousel-control.right {
   width: 100%;
 }
 
+.dancers--title {
+  text-align: center;
+  font-size: 3vw;
+}
+
 .dancers {
   padding: 10% 0;
 }
@@ -216,7 +228,8 @@ a.carousel-control.left, a.carousel-control.right {
 }
 
 .dancer-col {
-  flex: 1 32%;
+  flex: 1 25%;
+  margin: 1% 3%;
   a {
     width: 100%;
     height: auto;
@@ -230,7 +243,7 @@ a.carousel-control.left, a.carousel-control.right {
 .dancer--featured {
   display: flex;
   margin: 0 auto;
-  width: 50%;
+  width: 32%;
   a {
     width: 100%;
     height: auto;
@@ -255,6 +268,8 @@ a {
 }
 
 .header {
+  // position: fixed;
+  width: 100%;
   background: #3f3f3f;
   opacity: .7;
   display: flex;
@@ -428,6 +443,10 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.presentation {
+  display: block;
 }
 
 .pres-header {
