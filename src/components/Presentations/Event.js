@@ -1,4 +1,3 @@
-// ./src/components/Presentations/Events.js
 import React from 'react'
 
 export default event => (

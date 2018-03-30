@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouteData, Link } from 'react-static'
+
 export default withRouteData(({ dancers }) => (
   <section className="dancersSection">
     <h1>Dancers of Raices Peruanas</h1>

@@ -1,10 +1,8 @@
-// ./src/components/EngHistory.js
 import React from 'react'
-import { Jumbotron, PageHeader } from 'react-bootstrap'
 
 export default props => (
-  <Jumbotron className="mainHistory engHistory">
-    <PageHeader> History </PageHeader>
+  <div className="jumbotron mainHistory engHistory">
+    <h1> History </h1>
     <h1 className="historyTitleEng">Raíces Peruanas of Los Angeles</h1>
     <h6 className="historyCaption">(Spanish Version at the bottom)</h6>
     <p>
@@ -40,5 +38,5 @@ export default props => (
       people of the Peruvian community in Los Angeles are also part of the
       group, promoting thus the participation of youngsters in art and culture.
     </p>
-  </Jumbotron>
+  </div>
 )

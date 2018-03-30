@@ -1,6 +1,4 @@
-// ./src/components/Home/About.js
 import React from 'react'
-import { Jumbotron } from 'react-bootstrap'
 
 const About = () => (
   <div className="About">

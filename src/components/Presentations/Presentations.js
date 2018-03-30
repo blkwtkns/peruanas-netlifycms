@@ -1,7 +1,5 @@
-// ./src/components/Presentations/Presentations.js
 import React from 'react'
 import Event from './Event'
-// import { PageHeader } from 'react-bootstrap'
 import Separator from '../SepComponent'
 import { withRouteData } from 'react-static'
 

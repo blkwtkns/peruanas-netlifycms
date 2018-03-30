@@ -1,21 +1,17 @@
 import React from 'react'
-import { Jumbotron, Carousel, Image } from 'react-bootstrap'
+import ImageGallery from 'react-image-gallery'
 
-// <div className={'jumboCarousel ' + props.clName}>
-// </div>
-// className={'ImageCarousel'}
-export default props => {
+export default ({images}) => {
+  const pics = images.map(pic => {
+    return {
+      thumbnail: pic.data.thumbnail,
+      original: pic.data.thumbnail
+    }
+  })
+
   return (
-    <div className="ImageCarousel">
-      <Carousel>
-        {props.images.map((pic, i) => {
-          return (
-            <Carousel.Item key={i}>
-              <Image src={pic} key={i} />
-            </Carousel.Item>
-          )
-        })}
-      </Carousel>
+    <div className="homeGallery">
+      <ImageGallery items={pics} />
     </div>
   )
 }

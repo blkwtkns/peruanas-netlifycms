@@ -1,6 +1,5 @@
 import React from 'react'
 import RouteLinks from './RouteLinks'
-import SocialLinks from './SocialLinks'
 import { Link } from 'react-static'
 
 export default props => (
