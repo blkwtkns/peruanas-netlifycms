@@ -287,6 +287,9 @@ a {
   & > * {
     margin: 0 5%;
   }
+  .raicesLogo {
+    border-radius: 50%;
+  }
   .logo {
     a {
       color: antiquewhite;
@@ -427,15 +430,33 @@ a {
 }
 
 .event {
+  display: flex;
   margin: 3% 0;
+  flex-direction: row;
+  border: 1px solid #000000;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.event-media {
+  width: 30%;
+  .event-image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.eventData {
+  width: 70%;
   color: black;
   text-align: center;
   background: #ffffff;
-  padding: 1% 0;
+  padding: 10% 0;
 }
 
 .presentationsSection {
-  padding: 5% 0;
+  // padding: 5% 0;
 }
 
 .presentationsSection > .container {

@@ -1,6 +1,5 @@
 import React from 'react'
 import Event from './Event'
-import Separator from '../SepComponent'
 import { withRouteData } from 'react-static'
 
 // export default (props) => {
@@ -27,7 +26,6 @@ import { withRouteData } from 'react-static'
 //   );
 // }
 
-// { presentations.map(event => ( <Event key={event.data.slug} {...event.data} /> )) }
 
 export default withRouteData(({ presentations }) => (
   <section className="presentationsSection">
@@ -36,9 +34,7 @@ export default withRouteData(({ presentations }) => (
       <ul>
         {presentations.map((event, id) => (
           <li key={id} className="presentation">
-            {/*<Link to={`/blog/post/${post.data.slug}`}>{post.data.title}</Link>*/}
             <Event {...event.data} />
-            <Separator />
           </li>
         ))}
       </ul>
