@@ -18,7 +18,7 @@ import rootSaga from './sagas/rootSaga'
 const store = configureStore({})
 store.runSaga(rootSaga)
 
-import './assets/sass/main.scss'
+import './assets/sass/styles.scss'
 import logo from '../public/uploads/image1-small-23.png'
 
 const App = () => (
