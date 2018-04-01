@@ -1,0 +1,15 @@
+.dancer__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dancer__back {
+  text-decoration: none;
+  color: black;
+  text-align: left;
+}
+
+.dancer__image {
+  width: 30%;
+}

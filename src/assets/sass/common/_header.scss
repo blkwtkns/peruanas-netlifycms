@@ -1,0 +1,104 @@
+// header
+// ------------------------------------------------------------------------------------------------- //
+
+.header {
+  // position: absolute;
+  // width: 100%;
+  background: transparent;
+  // opacity: .7;
+  // display: flex;
+  // flex-flow: row wrap;
+  // align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  & ul {
+    display: flex;
+    align-items: center;
+    padding-start: 0;
+    & a {
+      padding: 1rem 2rem;
+      color: red;
+    }
+    & li {
+      display: block;
+    }
+  }
+}
+
+// .nav-left {
+//   display: flex;
+//   flex-flow: row;
+//   flex: 1 1 30%;
+//   /* This aligns items to the end line on main-axis */
+//   align-items: center;
+//   justify-content: flex-start;
+//   & > * {
+//     margin: 0 5%;
+//   }
+//   .raicesLogo {
+//     border-radius: 50%;
+//   }
+//   .logo {
+//     a {
+//       color: red;
+//     }
+//   }
+//
+// }
+
+// .nav-right {
+//   display: flex;
+//   flex-flow: row;
+//   flex: 1 1 60%;
+//   /* This aligns items to the end line on main-axis */
+//   // justify-content: flex-end;
+//   align-items: center;
+//   ul {
+//     display: flex;
+//     flex-flow: row;
+//     // justify-content: space-between;
+//     & > * {
+//       margin: 0 5%;
+//     }
+//     li {
+//       flex: 1 1 20%;
+//       display: block;
+//       a {
+//         color: red;
+//       }
+//     }
+//   }
+// }
+
+
+.title {
+  margin: 1em;
+  color: red;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  // .links {
+  //   display: initial;
+  // }
+  //
+  // .routeLinks > li {
+  //   margin-top: 1em;
+  // }
+
+  .raicesLogo {
+    width: 2em; 
+    height: 2em;
+    margin-top: .5em;
+  } 
+}
+
+@media only screen and (min-width: 768px) {
+  .raicesLogo {
+    width: 2.5em; 
+    height: 2.5em;
+  }
+}

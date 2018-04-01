@@ -1,0 +1,33 @@
+.contact__container {
+  min-height: calc(86vh);
+}
+
+@media only screen and (max-width: 768px) {
+  .contact__container {
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contact__container {
+    padding: 4% 20%;
+  }
+}
+
+.reqHeadline {
+  margin: 10rem 0 5rem 0;
+  text-align: center;
+}
+
+#formControlsTextarea {
+  height: 150px;
+}
+
+.committeeInfo {
+  margin: 10rem 0;
+  text-align: center;
+}
+
+.contact__text--container {
+  width: 100%;
+}

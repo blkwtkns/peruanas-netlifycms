@@ -1,0 +1,44 @@
+@import url('../css/font-awesome.min.css');
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
+
+@import 'vars';
+@import 'reset';
+@import 'utilities';
+
+// common
+@import 'common/header';
+@import 'common/footer';
+@import 'common/home';
+@import 'common/dances';
+@import 'common/dancers';
+@import 'common/dancer';
+@import 'common/presentations';
+// @import 'common/event';
+@import 'common/history';
+@import 'common/contact';
+
+html,
+body {
+  height: 100%;
+  // font-family: serif;
+  -webkit-font-smoothing: antialiased;
+  color: $blue;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mainSection {
+  padding: 5% 0;
+}
+
+.jumbotron {
+  text-align: -webkit-center;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.separator {
+  height: 2px;
+  width: 60%;
+  background: red;
+  margin: 0 auto;
+}

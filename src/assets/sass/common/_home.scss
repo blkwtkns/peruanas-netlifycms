@@ -1,0 +1,67 @@
+.Intro {
+  // padding: 28% 0;
+  height: 100vh;
+  background: no-repeat top center url('../../../public/uploads/machu-picchu-inca-peru.jpeg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .Intro {
+    padding: 80% 0;
+    height: 53em;
+  }
+
+  .jumboCarousel {
+    padding: 15% 0;
+    height: 47em;
+  }
+
+}
+.homeGallery {
+  padding: 5% 25%;
+}
+
+.introText {
+  color: floralwhite;
+}
+
+.greyBox {
+  background: rgba(63, 63, 63, .8);
+  color: red;
+  margin-right: 10%;
+
+  .intro-title {
+    font-size: 4vw;
+    margin-left: 10%;
+  }
+  .intro-subtitle {
+    font-size: 2vw;
+  }
+}
+
+/* About.css */
+.About {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 5% 20%;
+}
+
+@media only screen and (max-width: 768px) {
+  .About {
+    padding: 5%;
+  }
+}
+
+.About > .mainAbout, .raicesAbout {
+  color: red;
+}
+
+.separator {
+  height: 2px;
+  width: 60%;
+  background: red;
+  margin: 0 auto;
+}
