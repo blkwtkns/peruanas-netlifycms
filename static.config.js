@@ -54,10 +54,10 @@ export default {
   }),
   getRoutes: async () => {
     const presentations = await getPosts('presentations')
-    const logos = await getPosts('logos')
+    // const logos = await getPosts('logos')
     const images = await getPosts('home')
     const dancers = await getPosts('dancers')
-    // const dances = await getPosts('dances')
+    const dances = await getPosts('dances')
     // const photos = await getPosts('photos')
     // const history = await getPosts('history')
     return [
@@ -73,10 +73,6 @@ export default {
         component: 'src/components/History/History',
       },
       {
-        path: '/dances',
-        component: 'src/components/Dances/Dances',
-      },
-      {
         path: '/dancers',
         component: 'src/components/Dancers/Dancers',
         getData: () => ({
@@ -90,10 +86,20 @@ export default {
           }),
         })),
       },
-      // {
-      //   path: '/photos',
-      //   component: 'src/components/Photos/Photos',
-      // },
+      {
+        path: '/dances',
+        component: 'src/components/Dances/Dances',
+        getData: () => ({
+          dances,
+        }),
+        children: dances.map(dance => ({
+          path: `/dance/${dance.data.slug}`,
+          component: 'src/components/Dances/Dance',
+          getData: () => ({
+            dance,
+          }),
+        })),
+      },
       {
         path: '/contact',
         component: 'src/components/Contact/Contact',
@@ -105,20 +111,6 @@ export default {
           presentations,
         }),
       },
-      // {
-      //   path: '/blog',
-      //   component: 'src/containers/Blog',
-      //   getData: () => ({
-      //     posts,
-      //   }),
-      //   children: posts.map(post => ({
-      //     path: `/post/${post.data.slug}`,
-      //     component: 'src/containers/Post',
-      //     getData: () => ({
-      //       post,
-      //     }),
-      //   })),
-      // },
       {
         is404: true,
         component: 'src/components/404',

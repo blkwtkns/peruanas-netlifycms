@@ -2,9 +2,10 @@
 // ------------------------------------------------------------------------------------------------- //
 
 .header {
-  // position: absolute;
-  // width: 100%;
+  position: fixed;
+  width: 100%;
   background: transparent;
+  z-index: 2000;
   // opacity: .7;
   // display: flex;
   // flex-flow: row wrap;
@@ -23,6 +24,7 @@ nav {
       color: red;
     }
     & li {
+      font-size: 1.7vw;
       display: block;
     }
   }
@@ -73,32 +75,17 @@ nav {
 //   }
 // }
 
+.raicesLogo {
+  border-radius: 50%;
 
-.title {
-  margin: 1em;
-  color: red;
-  font-family: 'Open Sans', sans-serif;
-}
+  @media only screen and (max-width: 768px) {
+      width: 2em;
+      height: 2em;
+      margin-top: .5em;
+  }
 
-@media only screen and (max-width: 768px) {
-  // .links {
-  //   display: initial;
-  // }
-  //
-  // .routeLinks > li {
-  //   margin-top: 1em;
-  // }
-
-  .raicesLogo {
-    width: 2em; 
-    height: 2em;
-    margin-top: .5em;
-  } 
-}
-
-@media only screen and (min-width: 768px) {
-  .raicesLogo {
-    width: 2.5em; 
-    height: 2.5em;
+  @media only screen and (min-width: 768px) {
+    width: 3em;
+    height: 3em;
   }
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import { withRouteData, Link } from 'react-static'
 import Markdown from 'react-markdown'
-//
 
 export default withRouteData(({ dancer }) => (
   <section className="mainSection">

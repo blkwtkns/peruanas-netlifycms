@@ -9,7 +9,7 @@ export default ({ logo }) => (
       <li><Link to="/">Home</Link></li>
       <li><Link to="/presentations">Presentations</Link></li>
       <li><Link to="/dances">Dances</Link></li>
-      <li><img src={logo} className={'raicesLogo'}/></li>
+      <li><Link to="/"><img src={logo} className={'raicesLogo'} alt="peruanos logo" /></Link></li>
       <li><Link to="/history">History</Link></li>
       <li><Link to="/contact">Contact</Link></li>
       <li><Link to="/dancers">Dancers</Link></li>

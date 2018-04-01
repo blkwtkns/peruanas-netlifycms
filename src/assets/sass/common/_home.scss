@@ -1,8 +1,21 @@
 .Intro {
   // padding: 28% 0;
   height: 100vh;
-  background: no-repeat top center url('../../../public/uploads/machu-picchu-inca-peru.jpeg');
+  // background: no-repeat top center url('../../../public/uploads/machu-picchu-inca-peru.jpeg');
+  // background: no-repeat top center url('../../../public/uploads/tondero.gif');
+  background: no-repeat top center url('https://j.gifs.com/Oy2ZXE.gif');
   background-size: cover;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+    opacity: .6; 
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
