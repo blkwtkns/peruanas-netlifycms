@@ -6,7 +6,7 @@ import { Link } from 'react-static'
 export default ({ logo }) => (
   <nav className="nav">
     <ul className="nav__routes" role="navigation">
-      <li><Link to="/">Home</Link></li>
+      <li><Link to="/about">About</Link></li>
       <li><Link to="/presentations">Presentations</Link></li>
       <li><Link to="/dances">Dances</Link></li>
       <li><Link to="/"><img src={logo} className={'raicesLogo'} alt="peruanos logo" /></Link></li>

@@ -64,6 +64,13 @@ export default {
       {
         path: '/',
         component: 'src/components/Home/Home',
+        // getData: () => ({
+        //   images,
+        // }),
+      },
+      {
+        path: '/about',
+        component: 'src/components/Home/About',
         getData: () => ({
           images,
         }),
