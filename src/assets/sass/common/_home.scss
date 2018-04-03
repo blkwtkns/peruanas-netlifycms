@@ -42,16 +42,19 @@
 }
 
 .greyBox {
-  background: rgba(63, 63, 63, .8);
-  color: red;
-  margin-right: 10%;
+  // background: rgba(63, 63, 63, .8);
+  color: white;
+  // margin-right: 10%;
+  margin-bottom: 5%;
 
   .intro-title {
     font-size: 4vw;
-    margin-left: 10%;
+    text-align: center;
+    // margin-left: 10%;
   }
   .intro-subtitle {
     font-size: 2vw;
+    text-align: center;
   }
 }
 

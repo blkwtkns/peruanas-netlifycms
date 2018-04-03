@@ -2,7 +2,7 @@
   display: flex;
   margin: 3% 0;
   flex-direction: row;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   -webkit-box-shadow: 0 8px 6px -6px black;
   -moz-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
@@ -17,11 +17,16 @@
 }
 
 .eventData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 2vw;
   width: 70%;
-  color: black;
+  color: white;
   text-align: center;
-  background: #ffffff;
-  padding: 10% 0;
+  // background: rgba(63, 63, 63, .6);
+  background: linear-gradient(to bottom right,#002f4b,#dc4225);
+  padding: 5% 0;
 }
 
 .presentation__container {

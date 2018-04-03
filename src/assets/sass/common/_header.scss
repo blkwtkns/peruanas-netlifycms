@@ -2,6 +2,7 @@
 // ------------------------------------------------------------------------------------------------- //
 
 .header {
+  padding-top: 1%;
   position: fixed;
   width: 100%;
   background: transparent;
@@ -14,14 +15,14 @@
 
 nav {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   & ul {
     display: flex;
     align-items: center;
     padding-start: 0;
     & a {
       padding: 1rem 2rem;
-      color: red;
+      color: white;
     }
     & li {
       font-size: 1.7vw;
