@@ -8,7 +8,7 @@ import putURL from '../secrets/awsURLs'
 // and then instructing the saga middleware on the next line of action,
 // for success or failure
 
-export default function* contactPutSaga({ payload }) {
+export default function* putFormSaga({ payload }) {
   console.log('putFormSaga payload and url', putURL, payload)
   try {
     const status = yield call(putRaicesForm, putURL, payload)
