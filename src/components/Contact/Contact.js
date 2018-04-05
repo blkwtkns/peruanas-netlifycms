@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Notify from './NotifySubmission'
 import { connect } from 'react-redux'
-import * as types from '../../constants/actionTypes.js'
+import Notify from './NotifySubmission'
+// import * as types from '../../constants/actionTypes.js'
 import putFormAction from './contactActions'
 
 class Contact extends Component {
@@ -119,14 +119,12 @@ class Contact extends Component {
   }
 }
 
-const mapStateToProps = ({ state }) => ({
-  dbInfo: state.contactState.dbInfo,
+const mapStateToProps = ({ contact }) => ({
+  dbInfo: contact.dbInfo,
 })
 
-const mapDispatchToProps = dispatch => {
-  return {
-    submitForm: input => dispatch(putFormAction(input)),
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  submitForm: input => dispatch(putFormAction(input)),
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact)

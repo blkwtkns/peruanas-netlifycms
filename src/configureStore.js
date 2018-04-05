@@ -6,9 +6,6 @@ const sagaMiddleware = createSagaMiddleware()
 const middleware = [sagaMiddleware]
 
 export default initialState => {
-  // saga middleware
-  // middleware.push(window.__REDUX_DEVTOOLS_EXTENSION__);
-
   const store = createStore(
     rootReducer,
     initialState,

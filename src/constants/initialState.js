@@ -2,7 +2,7 @@ export default {
   contactState: {
     dbInfo: false,
   },
-  visibilityState: {
+  uiState: {
     footerVisible: true,
   },
 }

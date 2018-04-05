@@ -1,14 +1,9 @@
 import { combineReducers } from 'redux'
-// import { routerReducer } from 'react-router-redux';
-import contactReducer from './components/Contact/contactReducer'
-import visibilityReducer from './components/visibilityReducer'
+import contact from './components/Contact/contactReducer'
+import ui from './components/uiReducer'
 
-// DO NOT USE UNLESS THERE ARE MULTIPLE REDUCERS
-// Combine reducers
-
-  // state: contactReducer,
+// state: contactReducer,
 export default combineReducers({
-  state: contactReducer,
-  visibilityReducer
-  // routing: routerReducer
+  contact,
+  ui,
 })
