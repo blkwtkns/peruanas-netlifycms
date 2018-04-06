@@ -12,14 +12,12 @@ class Footer extends Component {
   }
 
   shouldComponentUpdate (maybeProps) {
-    console.log('footer shouldItUpdate', this.props, maybeProps)
-    return maybeProps.visible
+    return true
   }
 
   render () {
-    return (
-      { <this.props.visible && Footie /> }
-    )
+    if (this.props.visible) return ( <Footie /> )
+    return ( <div></div> )
   }
 }
 

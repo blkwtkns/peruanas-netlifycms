@@ -6,8 +6,11 @@ import footerAction from '../uiActions'
 
 class Home extends Component {
   componentDidMount () {
-    console.log('home mounted', this.props)
     this.props.footerVisibility(false)
+  }
+
+  componentWillUnmount () {
+    this.props.footerVisibility(true)
   }
 
   render () {
