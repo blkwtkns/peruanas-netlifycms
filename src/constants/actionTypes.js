@@ -5,3 +5,4 @@ export const PUT_CONTACT_FORM_ERROR = 'PUT_CONTACT_FORM_ERROR'
 
 // visibility
 export const FOOTER_VISIBILITY = 'FOOTER_VISIBILITY'
+export const HEADER_STASIS = 'HEADER_STASIS'

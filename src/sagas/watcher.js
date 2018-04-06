@@ -1,6 +1,6 @@
 import { takeLatest, take } from 'redux-saga/effects'
 import contactPutSaga from '../components/Contact/contactSaga'
-import uiSaga from '../components/uiSaga'
+// import uiSaga from '../components/uiSaga'
 import * as types from '../constants/actionTypes'
 // import regeneratorRuntime from 'regenerator-runtime';
 
@@ -8,5 +8,4 @@ import * as types from '../constants/actionTypes'
 export default function* watchPutForm () {
   console.log('watchPutForm triggered')
   yield takeLatest(types.PUT_CONTACT_FORM, contactPutSaga)
-  yield take(types.FOOTER_VISIBILITY, uiSaga)
 }

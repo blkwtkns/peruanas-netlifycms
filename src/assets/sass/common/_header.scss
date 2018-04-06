@@ -22,7 +22,7 @@ nav {
     padding-start: 0;
     & a {
       padding: 1rem 2rem;
-      color: white;
+      color: red;
     }
     & li {
       font-size: 1.7vw;
@@ -30,51 +30,6 @@ nav {
     }
   }
 }
-
-// .nav-left {
-//   display: flex;
-//   flex-flow: row;
-//   flex: 1 1 30%;
-//   /* This aligns items to the end line on main-axis */
-//   align-items: center;
-//   justify-content: flex-start;
-//   & > * {
-//     margin: 0 5%;
-//   }
-//   .raicesLogo {
-//     border-radius: 50%;
-//   }
-//   .logo {
-//     a {
-//       color: red;
-//     }
-//   }
-//
-// }
-
-// .nav-right {
-//   display: flex;
-//   flex-flow: row;
-//   flex: 1 1 60%;
-//   /* This aligns items to the end line on main-axis */
-//   // justify-content: flex-end;
-//   align-items: center;
-//   ul {
-//     display: flex;
-//     flex-flow: row;
-//     // justify-content: space-between;
-//     & > * {
-//       margin: 0 5%;
-//     }
-//     li {
-//       flex: 1 1 20%;
-//       display: block;
-//       a {
-//         color: red;
-//       }
-//     }
-//   }
-// }
 
 .raicesLogo {
   border-radius: 50%;
@@ -89,4 +44,19 @@ nav {
     width: 3em;
     height: 3em;
   }
+}
+
+.linkVisibile {
+  visibility: visible;
+}
+
+.linksHidden {
+  visibility: collapse;
+  opacity: 0;
+}
+
+.nav__routes:hover .linksHidden {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
 }

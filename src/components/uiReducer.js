@@ -4,6 +4,9 @@ const uiState = {
   footer: {
     visible: true,
   },
+  header: {
+    stasis: true,
+  },
 }
 
 export default (state = uiState, action) => {
@@ -13,11 +16,16 @@ export default (state = uiState, action) => {
     case types.FOOTER_VISIBILITY:
       return {
         ...state,
-        // state: {
           footer: {
             visible: payload,
           },
-        // },
+      }
+    case types.HEADER_STASIS:
+      return {
+        ...state,
+          header: {
+            stasis: payload,
+          },
       }
     default:
       return state

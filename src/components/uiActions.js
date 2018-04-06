@@ -1,9 +1,14 @@
 import * as types from '../constants/actionTypes'
 
-// Returns action type and PUT_FORM
+// Returns action type and payload
 const footerAction = payload => ({
   type: types.FOOTER_VISIBILITY,
   payload,
 })
 
-export default footerAction
+const headerAction = payload => ({
+  type: types.HEADER_STASIS,
+  payload,
+})
+
+export { footerAction, headerAction }

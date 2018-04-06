@@ -2,15 +2,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Intro from './Intro'
-import footerAction from '../uiActions'
+import { footerAction, headerAction } from '../uiActions'
 
 class Home extends Component {
   componentDidMount () {
     this.props.footerVisibility(false)
+    this.props.headerStasis(true)
   }
 
   componentWillUnmount () {
     this.props.footerVisibility(true)
+    this.props.headerStasis(false)
   }
 
   render () {
@@ -30,6 +32,7 @@ const mapStateToProps = ({ ui }) => {
 
 const mapDispatchToProps = dispatch => ({
   footerVisibility: visible => dispatch(footerAction(visible)),
+  headerStasis: stasis => dispatch(headerAction(stasis)),
 })
 
 export default connect(
