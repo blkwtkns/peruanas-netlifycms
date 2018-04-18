@@ -4,11 +4,13 @@ import Markdown from 'react-markdown'
 
 export default withRouteData(({ dance }) => (
   <section className="mainSection">
-    <div className="dancer__container">
-      <Link className="dancer__back" to="/dances/">{'<'} Back to Dances</Link>
+    <div className="dance__container">
+      <div className="back-row">
+        <Link className="dance__back" to="/dances/">{'<'} Back to Dances</Link>
+      </div>
       <br />
-      <h3>{dance.data.title}</h3>
-      <img className="dancer__image" src={dance.data.thumbnail} alt="" />
+      <h3 className="dance-title">{dance.data.title}</h3>
+      <img className="dance__image" src={dance.data.thumbnail} alt="" />
       <Markdown source={dance.content} escapeHtml={false} />
     </div>
   </section>

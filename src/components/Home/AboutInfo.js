@@ -31,7 +31,7 @@ export default () => (
         strengthening of our identity as Peruvians living in a foreign, far-away
         land. Raíces Peruanas is based in preserving tradition and in the
         cultural millennia legacy that continues living on and constitutes our{' '}
-        <em>TRUE CULTURE</em>.
+        <span className="raicesAbout"><em>TRUE CULTURE</em></span>.
       </p>
       <p>
         Raíces Peruanas is currently formed by a cast of renowned musicians and

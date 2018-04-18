@@ -2,7 +2,7 @@ import React from 'react'
 
 export default props => (
   <div className="jumbotron mainHistory espHistory">
-    <h1> Historia </h1>
+    <h1 className="historyMainTitle"> Historia </h1>
     <h1 className="historyTitleEsp">Raíces Peruanas de Los Angeles</h1>
     <p>
       Era el amor a la tierra que nos vio nacer y a los sentimientos de

@@ -12,9 +12,13 @@
 }
 
 .dancer-col {
-  flex: 1 25%;
-  margin: 1% 3%;
+  width: 100% !important;
+  height: auto !important;
+  // flex: 1 25%;
+  // margin: 1% 3%;
+
   a {
+
     width: 100%;
     height: auto;
     img {
@@ -27,7 +31,7 @@
 .dancer--featured {
   display: flex;
   margin: 0 auto;
-  width: 32%;
+  width: 30%;
   a {
     width: 100%;
     height: auto;
@@ -39,9 +43,68 @@
 }
 
 .dancers-grid {
+  // display: flex;
+  // flex-flow: row wrap;
+  // width: 100%;
+  // height: auto;
+  // justify-content: space-between;
+  padding: 5%;
+
+  line-height: 1;
+  -webkit-column-count: 3;
+  -webkit-column-gap:   1px;
+  -moz-column-count:    3;
+  -moz-column-gap:      1px;
+  column-count:         3;
+  column-gap:           1px;
+
+  @media (max-width: 1200px) {
+    -moz-column-count:    4;
+    -webkit-column-count: 4;
+    column-count:         4;
+  }
+  @media (max-width: 1000px) {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+  }
+  @media (max-width: 800px) {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+  }
+  @media (max-width: 400px) {
+    -moz-column-count:    1;
+    -webkit-column-count: 1;
+    column-count:         1;
+  }
+}
+
+.dancer__container {
   display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  height: auto;
-  justify-content: space-between;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+}
+
+.dancer__back {
+  text-decoration: none;
+  color: black;
+  text-align: left;
+  font-size: 1.5vw;
+  @media only screen and (max-width: 768px) {
+    font-size: 4vw;
+  }
+}
+
+.dancer-title {
+  margin-bottom: 2%;
+  font-size: 2vw;
+  @media only screen and (max-width: 768px) {
+    font-size: 4vw;
+  }
+}
+
+.dancer__image {
+  width: 30%;
 }

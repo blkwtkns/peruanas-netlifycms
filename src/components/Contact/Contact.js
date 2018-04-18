@@ -36,15 +36,11 @@ class Contact extends Component {
     return (
       <section className="mainSection">
         <div className="contact__container">
-          <div className="reqHeadline">
-            <h1>
-              Please contact us and/or send us your info to request more info or
-              book a performance.
-            </h1>
-          </div>
+          <h1 className="contact-headline">
+            Please contact us and/or send us your info to request more info or book a performance.</h1>
           <form action="#">
-            <div className="row uniform 50%">
-              <div className="6u 12u$(xsmall)">
+            <div className="contact-forms">
+              <div className="contact-info">
                 <input
                   type="text"
                   name="name"
@@ -53,7 +49,7 @@ class Contact extends Component {
                   onChange={event => this.handleInputState(event, `nameInput`) }
                   placeholder="Name" />
               </div>
-              <div className="6u$ 12u$(xsmall)">
+              <div className="contact-info">
                 <input
                   type="email"
                   name="email"
@@ -62,23 +58,25 @@ class Contact extends Component {
                   value={this.state.emailInput}
                   onChange={event => this.handleInputState(event, `emailInput`) } />
               </div>
-              <div className="6u 12u$(medium)">
-                <input type="checkbox" className="contact-generalInfo" name="info"/>
-                <label htmlFor="info">General Info</label>
+              <div className="contact-checkbox-container">
+                <div className="contact-checkbox">
+                  <input type="checkbox" className="contact-generalInfo" name="info"/>
+                  <label htmlFor="info">General Info</label>
+                </div>
+                <div className="contact-checkbox">
+                  <input type="checkbox" className="contact-bookingInfo" name="booking"/>
+                  <label htmlFor="booking">Booking</label>
+                </div>
+                <div className="contact-checkbox">
+                  <input type="checkbox" className="contact-pricingInfo" name="pricing"/>
+                  <label htmlFor="pricing">Pricing</label>
+                </div>
+                <div className="contact-checkbox">
+                  <input type="checkbox" className="contact-feedbackInfo" name="feedback"/>
+                  <label htmlFor="feedback">Feedback</label>
+                </div>
               </div>
-              <div className="6u$ 12u$(medium)">
-                <input type="checkbox" className="contact-bookingInfo" name="booking"/>
-                <label htmlFor="booking">Booking</label>
-              </div>
-              <div className="6u 12u$(medium)">
-                <input type="checkbox" className="contact-pricingInfo" name="pricing"/>
-                <label htmlFor="pricing">Pricing</label>
-              </div>
-              <div className="6u 12u$(medium)">
-                <input type="checkbox" className="contact-feedbackInfo" name="feedback"/>
-                <label htmlFor="feedback">Feedback</label>
-              </div>
-              <div className="12u$ contact__text--container">
+              <div className="contact__text--container">
                 <textarea
                   className="textarea"
                   id="message"
@@ -87,17 +85,13 @@ class Contact extends Component {
                   value={this.state.textInput}
                   onChange={event => this.handleInputState(event, `textInput`) } ></textarea>
               </div>
-              <div className="12u$">
-                <ul className="actions">
-                  <li>
-                    <input
-                      type="submit"
-                      value="Send Message"
-                      className="special"
-                      onClick={this.handleFormSubmit} />
-                  </li>
-                  <li><input type="reset" value="Reset" /></li>
-                </ul>
+              <div className="contact-actions">
+                <input
+                  type="submit"
+                  value="Send Message"
+                  className="special"
+                  onClick={this.handleFormSubmit} />
+                  <input type="reset" value="Reset" />
               </div>
             </div>
           </form>
@@ -106,11 +100,11 @@ class Contact extends Component {
 
           <div className="committeeInfo">
             <h2>Committee Members</h2>
-            <p>Director: Erbelia Espejo</p>
-            <p>Sub-director: Ben Espejo</p>
-            <p>Instructors: Oscar León</p>
+            <p><span>Director:</span> Erbelia Espejo</p>
+            <p><span>Sub-director:</span> Ben Espejo</p>
+            <p><span>Instructors:</span> Oscar León</p>
+            <p><span>Assistant:</span> April Espejo</p>
             <p>Cynthia Nagel</p>
-            <p>Assistant: April Espejo</p>
             <p>South Pasadena, CA 91030</p>
           </div>
         </div>

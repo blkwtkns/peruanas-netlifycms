@@ -7,9 +7,20 @@
   background: #3f3f3f;
   opacity: .7;
   color: #ffffff;
-  padding: 3% 0;
+  padding: 2% 0;
   text-align: center;
   bottom: 0;
+  .footainer p {
+    font-size: 1.5vw;
+    @media only screen and (max-width: 768px) {
+      font-size: 5vw;
+    }
+    margin-top: 2%;
+    a {
+      text-decoration: none;
+      color: red;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {

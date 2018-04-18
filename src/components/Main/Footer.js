@@ -27,7 +27,7 @@ class Footer extends Component {
 const Footie = ({ visible }) => {
   return !visible ? null : (
     <footer className="footer">
-      <div className="containter">
+      <div className="footainer">
         <Sociolinks />
         <p>RaicesPeruanas.com © Copyright 2004 - 2013</p>
         <p>

@@ -6,6 +6,7 @@ export default withRouteData(({ dancers }) => (
     <div className="dancers__container">
       <h1 className="dancers--title">Dancers of Raices Peruanas</h1>
       <br />
+
       {dancers.map((dancer, idx) => {
         if (idx !== 0) {
           return null
@@ -35,3 +36,5 @@ export default withRouteData(({ dancers }) => (
     </div>
   </section>
 ))
+
+

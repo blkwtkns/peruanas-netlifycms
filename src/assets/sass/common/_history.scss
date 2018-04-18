@@ -13,3 +13,37 @@
     padding: 5% 10%;
   }
 }
+
+
+.engHistory, .espHistory {
+  // text-align: center;
+  background-color: #ffffff;
+  // padding: 5% 30%;
+  font-size: 1.5vw;
+  line-height: 3vw;
+
+  @media only screen and (max-width: 768px) {
+    padding: 5%;
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+  .jumbotron > p {
+    margin-top: 5%;
+  }
+}
+
+.historyMainTitle {
+  margin: 5% 0;
+  color: red;
+  font-size: 4vw;
+  @media only screen and (max-width: 768px) {
+    font-size: 8vw;
+  }
+}
+.historyTitleEng, .historyTitleEsp {
+  font-size: 3vw;
+  @media only screen and (max-width: 768px) {
+    font-size: 7vw;
+  }
+  margin-bottom: 5%;
+}

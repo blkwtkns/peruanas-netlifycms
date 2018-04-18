@@ -9,7 +9,6 @@ export default props => (
   <section className="mainSection">
     <div className="history__container">
       <EngHistory />
-      <Separator />
       <EspHistory />
     </div>
   </section>
