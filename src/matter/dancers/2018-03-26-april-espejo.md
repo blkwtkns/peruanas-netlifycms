@@ -2,7 +2,7 @@
 layout: blog
 title: April Espejo
 date: '2018-03-26T00:38:33-07:00'
-thumbnail: /uploads/fot1b_.jpg
+thumbnail: /uploads/aprilfestejos.jpg
 rating: '1'
 ---
-Bobbobobobobo bobobaram
+April loves the worst Sci-fi series every made, Firefly.
