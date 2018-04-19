@@ -5,13 +5,17 @@ import Markdown from 'react-markdown'
 export default withRouteData(({ dancer }) => (
   <section className="mainSection">
     <div className="dancer__container">
-      <div className="back-row">
-        <Link className="dancer__back" to="/dancers/">{'<'} Back to Dancers</Link>
+      <div className="headline-row">
+        <div className="sub-headline">
+          <Link className="dancer__back" to="/dancers/">{'<'}</Link>
+        </div>
+        <div className="sub-headline">
+          <h3 className="dancer-title">{dancer.data.title}</h3>
+        </div>
       </div>
       <br />
-      <h3 className="dancer-title">{dancer.data.title}</h3>
       <img className="dancer__image" src={dancer.data.thumbnail} alt="" />
-      <Markdown source={dancer.content} escapeHtml={false} />
+      <Markdown className="dancer-markdown" source={dancer.content} escapeHtml={false} />
     </div>
   </section>
 ))

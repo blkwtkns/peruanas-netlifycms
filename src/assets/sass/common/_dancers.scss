@@ -105,9 +105,13 @@
   text-decoration: none;
   color: black;
   text-align: left;
-  font-size: 1.5vw;
+  font-size: 2vw;
+  font-weight: bold;
   @media only screen and (max-width: 768px) {
     font-size: 4vw;
+  }
+  &:hover {
+    color: red;
   }
 }
 
@@ -121,4 +125,13 @@
 
 .dancer__image {
   width: 30%;
+}
+
+.dancer-markdown {
+  text-align: center;
+  padding: 5% 20%;
+  font-size: 3vw;
+  @media only screen and (max-width: 768px) {
+    font-size: 7vw;
+  }
 }
