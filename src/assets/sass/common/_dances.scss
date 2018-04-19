@@ -3,7 +3,15 @@
   font-size: 3vw;
 }
 
+.dances-contain {
+  overflow: hidden;
+}
+
 .dances--featured {
+  transition: all .2s ease-in;
+  &:hover {
+    transform: scale(1.1); 
+  }
   display: flex;
   margin: 0 auto;
   width: 30%;
@@ -56,8 +64,13 @@
 }
 
 .dances-col {
-  width: 100% !important;
-  height: auto !important;
+  // width: 100% !important;
+  // height: auto !important;
+
+  transition: all .2s ease-in;
+  &:hover {
+    transform: scale(1.1); 
+  }
   // flex: 1 25%;
   // margin: 1% 3%;
 
