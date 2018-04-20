@@ -1,6 +1,10 @@
 .dances--title {
   text-align: center;
   font-size: 3vw;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 8vw;
+  }
 }
 
 .dances-contain {
@@ -121,18 +125,18 @@
   color: black;
   // text-align: left;
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 3vw;
   @media only screen and (max-width: 768px) {
-    font-size: 4vw;
+    font-size: 8vw;
   }
   &:hover {
     color: red;
   }
 }
 .dance-title {
-  font-size: 2vw;
+  font-size: 3vw;
   @media only screen and (max-width: 768px) {
-    font-size: 4vw;
+    font-size: 8vw;
   }
 }
 

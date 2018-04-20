@@ -1,6 +1,10 @@
 .dancers--title {
   text-align: center;
   font-size: 3vw;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 8vw;
+  }
 }
 
 .dancers {
@@ -105,10 +109,10 @@
   text-decoration: none;
   color: black;
   text-align: left;
-  font-size: 2vw;
+  font-size: 3vw;
   font-weight: bold;
   @media only screen and (max-width: 768px) {
-    font-size: 4vw;
+    font-size: 8vw;
   }
   &:hover {
     color: red;
@@ -117,9 +121,9 @@
 
 .dancer-title {
   margin-bottom: 2%;
-  font-size: 2vw;
+  font-size: 3vw;
   @media only screen and (max-width: 768px) {
-    font-size: 4vw;
+    font-size: 8vw;
   }
 }
 
