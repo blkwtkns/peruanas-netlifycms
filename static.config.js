@@ -4,6 +4,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import axios from 'axios'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import React from 'react'
 
 function getPosts(type) {
   const items = []
@@ -49,8 +50,21 @@ function getPosts(type) {
 }
 
 export default {
+  preact: true,
+  siteRoot: 'https://raicesperuanas.com',
+  basePath: '/',
+  Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
+    <Html lang="en-US">
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Raices Peruanas, Promoting Music and Dances from Peru, Los Angeles, CA</title>
+      </Head>
+      <Body>{children}</Body>
+    </Html>
+  ),
   getSiteData: () => ({
-    title: 'React Static with Netlify CMS',
+    title: 'Raices Peruanas',
   }),
   getRoutes: async () => {
     const presentations = await getPosts('presentations')
@@ -58,7 +72,6 @@ export default {
     const images = await getPosts('home')
     const dancers = await getPosts('dancers')
     const dances = await getPosts('dances')
-    // const photos = await getPosts('photos')
     // const history = await getPosts('history')
     return [
       {

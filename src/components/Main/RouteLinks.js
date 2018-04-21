@@ -36,7 +36,7 @@ export default class Routelinks extends Component {
         <div id="nav-container">
           <header id="nav-header">
             <div className="raicesLink nav-logo"><Link to="/"><img src={this.props.logo} className='raicesLogo' alt="peruanos logo" /></Link></div>
-            <div className={this.toggleMenuBackground(this.props.stasis)} onClick={this.toggleMobileMenu}><i className="fas fa-bars fa-2x"></i></div>
+            <div className={this.toggleMenuBackground(this.props.stasis)} onClick={this.toggleMobileMenu}><i className="fa fa-bars fa-2x"></i></div>
           </header>
           <nav>
             <ul className={this.toggleListClass()}>

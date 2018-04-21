@@ -9,26 +9,9 @@
   z-index: 2000;
 }
 
-.raicesLogo {
-  border-radius: 50%;
-
-  @media only screen and (max-width: 768px) {
-      width: 10vw;
-      height: 10vw;
-      margin-top: .5em;
-  }
-
-  @media only screen and (min-width: 768px) {
-    width: 3em;
-    height: 3em;
-  }
-}
-
-
-
 .nav-links-home {
   a {
-    color: red;
+    color: white;
   }
 }
 
@@ -66,8 +49,11 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1000px;
-  margin: 0 auto;
+  // max-width: 1000px;
+  // flex-direction: row;
+  @media only screen and (min-width: 768px) {
+    margin: 0 .5em;
+  }
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -90,6 +76,22 @@
   align-items: center;
 }
 
+.raicesLogo {
+  border-radius: 50%;
+
+  @media only screen and (max-width: 768px) {
+      width: 10vw;
+      height: 10vw;
+      margin-top: .5em;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-top: .5em;
+    width: 3em;
+    height: 3em;
+  }
+}
+
 #nav-logo {
   color: #444;
   text-decoration: none;
@@ -103,7 +105,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 700px;
+  max-width: 768px;
 }
 
 .nav-ul > li {
@@ -139,7 +141,7 @@
 
 
 /* MOBILE MENU */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .raicesLink {
     margin-left: 4vw;
   }
@@ -159,11 +161,11 @@
     cursor: pointer;
   }
   .nav-menu-btn-clr-else {
-    background-color: #f1f1f1;
+    // background-color: #f1f1f1;
   }
   .nav-menu-btn-clr-home {
     background-color: transparent;
-    color: red;
+    color: white;
   }
 
   .nav-ul {
@@ -186,7 +188,7 @@
   .nav-link {
     padding: 1rem 0;
     font-size: 1.3rem;
-    border-bottom: 1px solid #444;
+    // border-bottom: 1px solid #444;
     margin-right: 5vw;
   }
 }

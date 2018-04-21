@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Notify from './NotifySubmission'
-// import * as types from '../../constants/actionTypes.js'
 import putFormAction from './contactActions'
+import { footerAction, headerAction } from '../uiActions'
 
 class Contact extends Component {
   constructor(props) {
@@ -13,6 +13,11 @@ class Contact extends Component {
       textInput: ""
     };
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
+  }
+
+  componentDidMount () {
+    this.props.footerVisibility(true)
+    this.props.headerStasis(false)
   }
 
   handleFormSubmit(e) {
@@ -113,12 +118,15 @@ class Contact extends Component {
   }
 }
 
-const mapStateToProps = ({ contact }) => ({
+const mapStateToProps = ({ contact, ui }) => ({
   dbInfo: contact.dbInfo,
+  visible: ui.footer.visible
 })
 
 const mapDispatchToProps = dispatch => ({
   submitForm: input => dispatch(putFormAction(input)),
+  footerVisibility: visible => dispatch(footerAction(visible)),
+  headerStasis: stasis => dispatch(headerAction(stasis))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact)

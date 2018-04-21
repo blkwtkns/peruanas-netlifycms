@@ -1,7 +1,6 @@
 // import { withRouteData } from 'react-static'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Intro from './Intro'
 import { footerAction, headerAction } from '../uiActions'
 
 class Home extends Component {
@@ -18,7 +17,12 @@ class Home extends Component {
   render () {
     return (
       <section className="homeSection">
-        <Intro />
+        <div className="Intro">
+          <div className="greyBox">
+            <h1 className="intro-title">Raices Peruanas</h1>
+            <h1 className="intro-subtitle">Dance, Music, Culture</h1>
+          </div>
+        </div>
       </section>
     )
   }

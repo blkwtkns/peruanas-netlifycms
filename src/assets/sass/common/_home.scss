@@ -1,4 +1,5 @@
-.Intro {
+// .Intro {
+.homeSection {
   // padding: 28% 0;
   height: 100vh;
   // background: no-repeat top center url('../../../public/uploads/machu-picchu-inca-peru.jpeg');
@@ -33,6 +34,7 @@
   }
 
 }
+
 .homeGallery {
   padding: 0% 30%;
 }
@@ -50,11 +52,17 @@
   .intro-title {
     font-size: 4vw;
     text-align: center;
+    @media (max-width: 768px) {
+      font-size: 8vw;
+    }
     // margin-left: 10%;
   }
   .intro-subtitle {
     font-size: 2vw;
     text-align: center;
+    @media (max-width: 768px) {
+      font-size: 5vw;
+    }
   }
 }
 
