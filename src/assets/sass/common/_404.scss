@@ -25,7 +25,10 @@
 }
 
 .denied__wrapper {
-  max-width: 50vw;
+  max-width: 30vw;
+  @media screen and (max-width: 1040px) {
+    max-width: 80vw;
+  }
   width: 100%;
   height: 100vh;
   display: block;

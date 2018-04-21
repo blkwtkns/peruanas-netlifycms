@@ -51,8 +51,8 @@ function getPosts(type) {
 
 export default {
   preact: true,
-  siteRoot: 'https://raicesperuanas.com',
-  basePath: '/',
+  // siteRoot: 'https://raicesperuanas.com',
+  // basePath: '/',
   Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
     <Html lang="en-US">
       <Head>
@@ -76,10 +76,7 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/components/Home/Home',
-        // getData: () => ({
-        //   images,
-        // }),
+        component: 'src/components/Home/Home'
       },
       {
         path: '/about',
