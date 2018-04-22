@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Router } from 'react-static'
 import Routes from 'react-static-routes'
 import { Provider } from 'react-redux'
@@ -16,11 +16,10 @@ import logo from '../public/uploads/image1-small-23.png'
 const store = configureStore({})
 store.runSaga(rootSaga)
 
-
 const App = () => (
   <Provider store={store} key="provider">
     <Router>
-      <div className="main-container">
+      <div id="main-container">
         <Header logo={logo} />
         <Routes />
         <Footer />

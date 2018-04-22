@@ -7,11 +7,14 @@ class Home extends Component {
   componentDidMount () {
     this.props.footerVisibility(false)
     this.props.headerStasis(true)
+    document.getElementById('main-container').style.paddingBottom = 0;
   }
 
   componentWillUnmount () {
     this.props.footerVisibility(true)
     this.props.headerStasis(false)
+
+    document.getElementById('main-container').style.paddingBottom = '23vh';
   }
 
   render () {

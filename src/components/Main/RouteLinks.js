@@ -8,6 +8,7 @@ export default class Routelinks extends Component {
       listVisibility: true
     };
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this)
+    this.closeMenu = this.closeMenu.bind(this)
   }
 
   toggleMobileMenu() {
@@ -30,6 +31,10 @@ export default class Routelinks extends Component {
     return stasis ? 'nav-menu-button nav-menu-btn-clr-home' : 'nav-menu-button nav-menu-btn-clr-else';
   }
 
+  closeMenu() {
+    return this.toggleMobileMenu();
+  }
+
   render() {
     return (
       <div className={this.toggleHeaderBackground(this.props.stasis)}>
@@ -40,12 +45,10 @@ export default class Routelinks extends Component {
           </header>
           <nav>
             <ul className={this.toggleListClass()}>
-              <li className={this.toggleLinkVisibility(this.props.stasis)}><Link to="/about">About</Link></li>
-              <li className={this.toggleLinkVisibility(this.props.stasis)}><Link to="/presentations">Presentations</Link></li>
-              <li className={this.toggleLinkVisibility(this.props.stasis)}><Link to="/dances">Dances</Link></li>
-              <li className={this.toggleLinkVisibility(this.props.stasis)}><Link to="/history">History</Link></li>
-              <li className={this.toggleLinkVisibility(this.props.stasis)}><Link to="/dancers">Dancers</Link></li>
-              <li className={this.toggleLinkVisibility(this.props.stasis)}><Link to="/contact">Contact</Link></li>
+              { ['about', 'presentations', 'dances', 'history', 'dancers', 'contact'].map((route, idx) => {
+                const upper = route.charAt(0).toUpperCase() + route.slice(1);
+                return <li key={idx} onClick={this.closeMenu} className={this.toggleLinkVisibility(this.props.stasis)}><Link to={`/${route}`}>{upper}</Link></li>
+              })}
             </ul>
           </nav>
         </div>
