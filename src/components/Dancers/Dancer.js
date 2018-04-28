@@ -17,12 +17,10 @@ class Dancer extends Component {
         <section className="mainSection">
           <div className="dancer__container">
             <div className="headline-row">
-              <div className="sub-headline">
-                <Link className="dancer__back" to="/dancers/">{'<'}</Link>
+              <div className="dancer-back-btn">
+                <Link className="sub-headline dancer__back" to="/dancers/">Back to Dancers</Link>
               </div>
-              <div className="sub-headline">
-                <h3 className="dancer-title">{dancer.data.title}</h3>
-              </div>
+              <h3 className="sub-headline dancer-title">{dancer.data.title}</h3>
             </div>
             <br />
             <img className="dancer__image" src={dancer.data.thumbnail} alt="" />
