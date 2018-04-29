@@ -31,8 +31,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "English-Body", name: "english-body", widget: "markdown"}
-      - {label: "espanol-Body", name: "espanol-body", widget: "markdown"}
+      - {label: "English", name: "english", widget: "markdown"}
+      - {label: "espanol", name: "espanol", widget: "markdown"}
 
   - name: "presentations" # Used in routes, e.g., /admin/collections/blog
     label: "Presentation" # Used in the UI
