@@ -1,10 +1,11 @@
 import React from 'react'
 import Gallery from '../ImageCarousel'
 
-export default ({images}) => (
+export default ({ images, info, language }) => (
   <div className="About">
     <div className="jumbotron">
-      <h1 className="mainAbout">
+      { language === 'en' ? info.firstenglish : info.primeroespanol }
+  {/*<h1 className="mainAbout">
         Peruvian Events in Los Angeles Promoting Music and Dances from Peru
       </h1>
       <p>
@@ -26,11 +27,12 @@ export default ({images}) => (
         Peruvian descent, thus forming unique groups of true messengers and
         disseminators of their own ethnic background, making Raíces Peruanas a
         rich blend of Peruvian culture and tradition.
-      </p>
+      </p>*/}
     </div>
     <Gallery galleryClass={'homeGallery'} images={images} />
     <div className="jumbotron">
-      <p>
+      { language === 'en' ? info.secondenglish : info.segundoespanol }
+  {/*<p>
         Raíces Peruanas is an objectively-geared effort and contribution to the
         strengthening of our identity as Peruvians living in a foreign, far-away
         land. Raíces Peruanas is based in preserving tradition and in the
@@ -42,7 +44,7 @@ export default ({images}) => (
         dancers, masters of unique and diverse music, dance, and movement which
         during each of their performances, strike the audience with a new sense
         of beauty and the realization of a new reality never before seen.
-      </p>
+      </p>*/}
     </div>
   </div>
 )

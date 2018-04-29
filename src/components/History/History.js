@@ -19,8 +19,9 @@ class History extends Component {
         return (
           <section className="mainSection">
             <div className="history__container">
-              <EngHistory histContent={newHistory.english} histTitle={newHistory.englishTitle}/>
-              <EspHistory histContent={newHistory.espanol} histTitle={newHistory.espanolTitle}/>
+            { this.props.language === 'en' ?
+              <EngHistory histContent={newHistory.english} histTitle={newHistory.englishTitle}/> :
+              <EspHistory histContent={newHistory.espanol} histTitle={newHistory.espanolTitle}/>}
             </div>
           </section>
       )}} />
@@ -31,6 +32,7 @@ class History extends Component {
 const mapStateToProps = ({ ui }) => {
   return {
     visible: ui.footer.visible,
+    language: ui.language.visible,
   }
 }
 

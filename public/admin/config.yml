@@ -18,7 +18,10 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Part One - English", name: "firstenglish", widget: "markdown"}
+      - {label: "Part One - Espanol", name: "primeroespanol", widget: "markdown"}
+      - {label: "Part Two - English", name: "secondenglish", widget: "markdown"}
+      - {label: "Part Two - Espanol", name: "segundoespanol", widget: "markdown"}
 
   - name: "history" # Used in routes, e.g., /admin/collections/blog
     label: "History" # Used in the UI

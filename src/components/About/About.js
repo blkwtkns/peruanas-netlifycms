@@ -13,9 +13,13 @@ class About extends Component {
 
   render () {
     return (
-      <RouteData render={({ images }) => (
+      <RouteData render={({ images, about }) => (
         <section className="mainSection">
-          <AboutInfo images={images}/>
+          <AboutInfo
+            images={images}
+            info={about[0].data}
+            language={this.props.language}
+          />
         </section>
       )} />
     )
@@ -25,6 +29,7 @@ class About extends Component {
 const mapStateToProps = ({ ui }) => {
   return {
     visible: ui.footer.visible,
+    language: ui.language.visible,
   }
 }
 

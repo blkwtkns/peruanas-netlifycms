@@ -105,7 +105,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-width: 768px;
+  // max-width: 768px;
 }
 
 .nav-ul > li {
@@ -129,10 +129,12 @@
   }
 }
 
-// .nav-link:hover {
-//   background-color: #f1f1f1;
-//   // background-color: #444;
-// }
+.nav__lang {
+  color: #5DBCD2;
+  &:hover {
+    color: red;
+  }
+}
 
 .nav-links-else:hover {
   background-color: #f1f1f1;
@@ -224,4 +226,3 @@
   }
 }
 /* END DESKTOP MENU */
-

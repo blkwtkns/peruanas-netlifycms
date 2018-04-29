@@ -23,7 +23,7 @@ class Home extends Component {
         <div className="Intro">
           <div className="greyBox">
             <h1 className="intro-title">Raices Peruanas</h1>
-            <h1 className="intro-subtitle">Dance, Music, Culture</h1>
+      {this.props.language === 'en' ? <h1 className="intro-subtitle">Dance, Music, Culture</h1> : <h1 className="intro-subtitle">Bailar, Musica, Cultura</h1> }
           </div>
         </div>
       </section>
@@ -34,6 +34,7 @@ class Home extends Component {
 const mapStateToProps = ({ ui }) => {
   return {
     visible: ui.footer.visible,
+    language: ui.language.visible,
   }
 }
 

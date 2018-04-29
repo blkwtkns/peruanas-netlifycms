@@ -7,6 +7,9 @@ const uiState = {
   header: {
     stasis: true,
   },
+  language: {
+    visible: 'en',
+  },
 }
 
 export default (state = uiState, action) => {
@@ -25,6 +28,13 @@ export default (state = uiState, action) => {
         ...state,
           header: {
             stasis: payload,
+          },
+      }
+    case types.LANGUAGE:
+      return {
+        ...state,
+          language: {
+            visible: payload,
           },
       }
     default:

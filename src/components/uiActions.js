@@ -11,4 +11,9 @@ const headerAction = payload => ({
   payload,
 })
 
-export { footerAction, headerAction }
+const languageAction = payload => ({
+  type: types.LANGUAGE,
+  payload,
+})
+
+export { footerAction, headerAction, languageAction }

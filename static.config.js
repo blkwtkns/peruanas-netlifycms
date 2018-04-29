@@ -72,6 +72,7 @@ export default {
     const dancers = await getPosts('dancers')
     const dances = await getPosts('dances')
     const history = await getPosts('history')
+    const about = await getPosts('about')
     return [
       {
         path: '/',
@@ -82,6 +83,7 @@ export default {
         component: 'src/components/About/About',
         getData: () => ({
           images,
+          about
         }),
       },
       {

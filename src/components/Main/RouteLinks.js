@@ -34,7 +34,6 @@ export default class Routelinks extends Component {
   closeMenu() {
     return this.toggleMobileMenu();
   }
-
   render() {
     return (
       <div className={this.toggleHeaderBackground(this.props.stasis)}>
@@ -45,6 +44,12 @@ export default class Routelinks extends Component {
           </header>
           <nav>
             <ul className={this.toggleListClass()}>
+              <li className={`${this.toggleLinkVisibility(this.props.stasis)} nav__lang`}>
+                <p>en</p>
+              </li>
+              <li className={`${this.toggleLinkVisibility(this.props.stasis)} nav__lang`}>
+                <p>es</p>
+              </li>
               { ['about', 'presentations', 'dances', 'history', 'dancers', 'contact'].map((route, idx) => {
                 const upper = route.charAt(0).toUpperCase() + route.slice(1);
                 return <li key={idx} onClick={this.closeMenu} className={this.toggleLinkVisibility(this.props.stasis)}><Link to={`/${route}`}>{upper}</Link></li>
