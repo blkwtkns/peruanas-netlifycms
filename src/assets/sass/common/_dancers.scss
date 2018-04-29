@@ -105,29 +105,13 @@
   flex-direction: column;
 }
 
-// .headline-row {
-//   margin: 0 auto;
-//   width: 30%;
-//   display: flex;
-//   flex-direction: column;
-//   align-content: center;
-//   justify-content: center;
-//   margin-bottom: 1%;
-// }
-// .sub-headline {
-//   text-align: center;
-// }
 .dancer-back-btn {
-  text-align: center;
-  border-radius: 8px;
-  padding: 1vw 3vw;
+  &:hover {
+    background-color: #3cb4d0;
+  }
   margin-bottom: 20%;
   background-color: #5DBCD2;
-  &:hover {
-    .dancer__back {
-      font-size: 3.1vw;
-    }
-  }
+  @include btn;
 }
 
 .dancer__back {
@@ -135,7 +119,7 @@
   font-weight: bold;
   font-size: 3vw;
   @media only screen and (max-width: 768px) {
-    font-size: 8vw;
+    font-size: 5vw;
   }
 }
 
@@ -157,5 +141,8 @@
   font-size: 3vw;
   @media only screen and (max-width: 768px) {
     font-size: 7vw;
+  }
+  & > * {
+    margin: 5% 0;
   }
 }

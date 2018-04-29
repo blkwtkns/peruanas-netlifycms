@@ -3,6 +3,7 @@
 @import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 
 @import 'vars';
+@import 'mixins';
 @import 'reset';
 @import 'utilities';
 
@@ -10,6 +11,7 @@
 @import 'common/header';
 @import 'common/footer';
 @import 'common/home';
+@import 'common/about';
 @import 'common/dances';
 @import 'common/dancers';
 @import 'common/presentations';
@@ -54,4 +56,21 @@ body {
 
 #main-container-no-foot {
   position: relative;
+}
+
+.headline-row {
+  margin: 0 auto;
+  width: 30%;
+  @media only screen and (max-width: 768px) {
+    width: 60%;
+  }
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 1%;
+}
+
+.sub-headline {
+  text-align: center;
 }

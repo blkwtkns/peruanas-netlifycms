@@ -1,6 +1,7 @@
 import React from 'react'
+import Gallery from '../ImageCarousel'
 
-export default () => (
+export default ({images}) => (
   <div className="About">
     <div className="jumbotron">
       <h1 className="mainAbout">
@@ -26,6 +27,9 @@ export default () => (
         disseminators of their own ethnic background, making Raíces Peruanas a
         rich blend of Peruvian culture and tradition.
       </p>
+    </div>
+    <Gallery galleryClass={'homeGallery'} images={images} />
+    <div className="jumbotron">
       <p>
         Raíces Peruanas is an objectively-geared effort and contribution to the
         strengthening of our identity as Peruvians living in a foreign, far-away
