@@ -12,16 +12,18 @@ class History extends Component {
     this.props.headerStasis(false)
   }
 
+            // <EngHistory />
+            // <EspHistory />
   render () {
     return (
-      <RouteData render={({ images }) => (
+      <RouteData render={({ history }) => {
+        console.log('check history', history)
+        return (
         <section className="mainSection">
           <div className="history__container">
-            <EngHistory />
-            <EspHistory />
           </div>
         </section>
-      )} />
+      )}} />
     )
   }
 }

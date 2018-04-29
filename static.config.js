@@ -71,7 +71,7 @@ export default {
     const images = await getPosts('home')
     const dancers = await getPosts('dancers')
     const dances = await getPosts('dances')
-    // const history = await getPosts('history')
+    const history = await getPosts('history')
     return [
       {
         path: '/',
@@ -87,6 +87,9 @@ export default {
       {
         path: '/history',
         component: 'src/components/History/History',
+        getData: () => ({
+          history,
+        }),
       },
       {
         path: '/dancers',
