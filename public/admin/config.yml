@@ -31,17 +31,10 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "English-Title", name: "english-title", widget: "string"}
       - {label: "English", name: "english", widget: "markdown"}
+      - {label: "Espanol-Title", name: "espanol-title", widget: "string"}
       - {label: "espanol", name: "espanol", widget: "markdown"}
-      # - label: "Object"
-      #   name: "object"
-      #   widget: "object"
-      #   fields:
-      #     - label: "Espanol"
-      #       name: "espanol"
-      #       widget: "hidden"
-      #       default: "blog"
-      #     - {label: "espanol", name: "espanol", widget: "markdown"}
 
   - name: "presentations" # Used in routes, e.g., /admin/collections/blog
     label: "Presentation" # Used in the UI
