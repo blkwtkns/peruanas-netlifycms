@@ -31,15 +31,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - label: "Object"
-        name: "object"
-        widget: "object"
-        fields:
-          - label: "English"
-            name: "english"
-            widget: "hidden"
-            default: "blog"
-          - {label: "English", name: "english", widget: "markdown"}
+      - {label: "English", name: "english", widget: "markdown"}
       - label: "Object"
         name: "object"
         widget: "object"
