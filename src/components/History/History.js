@@ -12,17 +12,17 @@ class History extends Component {
     this.props.headerStasis(false)
   }
 
-            // <EngHistory />
-            // <EspHistory />
   render () {
     return (
       <RouteData render={({ history }) => {
-        console.log('check history', history)
+        const newHistory = history[0].data;
         return (
-        <section className="mainSection">
-          <div className="history__container">
-          </div>
-        </section>
+          <section className="mainSection">
+            <div className="history__container">
+              <EngHistory histContent={newHistory.english} histTitle={newHistory.englishTitle}/>
+              <EspHistory histContent={newHistory.espanol} histTitle={newHistory.espanolTitle}/>
+            </div>
+          </section>
       )}} />
     )
   }
