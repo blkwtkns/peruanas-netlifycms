@@ -92,13 +92,13 @@
   }
 }
 
-#nav-logo {
-  color: #444;
-  text-decoration: none;
-}
-#nav-logo:hover {
-  color: #666;
-}
+// #nav-logo {
+//   color: #444;
+//   text-decoration: none;
+// }
+// #nav-logo:hover {
+//   color: #666;
+// }
 
 .nav-ul {
   display: -webkit-box;
@@ -129,8 +129,18 @@
   }
 }
 
-.nav-link:hover {
+// .nav-link:hover {
+//   background-color: #f1f1f1;
+//   // background-color: #444;
+// }
+
+.nav-links-else:hover {
   background-color: #f1f1f1;
+  // background-color: #444;
+}
+
+.nav-links-home:hover {
+  background-color: #444;
 }
 
 .active-link {

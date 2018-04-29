@@ -52,14 +52,14 @@ class Contact extends Component {
                   className="name"
                   value={this.state.nameInput}
                   onChange={event => this.handleInputState(event, `nameInput`) }
-                  placeholder="Name" />
+                  placeholder=" Name" />
               </div>
               <div className="contact-info">
                 <input
                   type="email"
                   name="email"
                   className="email"
-                  placeholder="Email"
+                  placeholder=" Email"
                   value={this.state.emailInput}
                   onChange={event => this.handleInputState(event, `emailInput`) } />
               </div>

@@ -20,6 +20,20 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
+  - name: "history" # Used in routes, e.g., /admin/collections/blog
+    label: "History" # Used in the UI
+    folder: "src/matter/history" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter. 
+    # Remove any that aren't needed for posts
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "English-Body", name: "english-body", widget: "markdown"}
+      - {label: "espanol-Body", name: "espanol-body", widget: "markdown"}
+
   - name: "presentations" # Used in routes, e.g., /admin/collections/blog
     label: "Presentation" # Used in the UI
     folder: "src/matter/presentations" # The path to the folder where the documents are stored
