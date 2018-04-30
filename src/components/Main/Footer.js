@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import Sociolinks from './SocialLinks'
 
 const mapStateToProps = ({ ui }) => ({
   visible: ui.footer.visible,

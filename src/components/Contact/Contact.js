@@ -51,7 +51,7 @@ class Contact extends Component {
   }
 
   handleInputState(event, type) {
-    console.log('see event and type', event, type);
+    // console.log('see event and type', event, type);
     let update = {};
     update[type] = event.target.value;
     this.setState(update);

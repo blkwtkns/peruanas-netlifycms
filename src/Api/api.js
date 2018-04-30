@@ -2,7 +2,6 @@
 // if (!window.fetch) { const fetch = require('whatwg-fetch') }
 
 const putRaicesForm = (url, input) => {
-  console.log('put triggered?')
 
   return fetch(url, {
     method: 'PUT',
@@ -14,7 +13,6 @@ const putRaicesForm = (url, input) => {
   })
     .then(response => response.json())
     .then(json => {
-      console.log('success')
       return {
         dbInfo: true,
       }

@@ -14,7 +14,6 @@ const uiState = {
 
 export default (state = uiState, action) => {
   const { type, payload } = action
-  console.log('state inside uiReducer', type, payload)
   switch (type) {
     case types.FOOTER_VISIBILITY:
       return {

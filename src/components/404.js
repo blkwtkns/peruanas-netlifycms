@@ -11,12 +11,6 @@ class FourOhFour extends Component {
     this.props.headerStasis(true)
   }
 
-  // componentWillUnmount () {
-  //   this.props.footerVisibility(true)
-  //   this.props.headerStasis(false)
-  // }
-
-  // <div id="particles-js"></div>
   render () {
     return (
       <div className="permission_denied">
@@ -141,7 +135,7 @@ class FourOhFour extends Component {
         />
         <div className="denied__wrapper">
           <h1>404</h1>
-          <h3>LOST IN <span>SPACE</span> App-Name? Hmm, looks like that page doesnt exist.</h3>
+          <h3>LOST IN <span>SPACE</span> Raices Peruanas? Hmm, looks like that page doesnt exist.</h3>
           <svg id="astronaut" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <circle cx="256.8" cy="255.3" r="247.9" className="st0"/>
             <path d="M346.4 475H164.9V244.8c0-14 11.4-25.4 25.4-25.4H321c14 0 25.4 11.4 25.4 25.4V475z" className="st2"/>

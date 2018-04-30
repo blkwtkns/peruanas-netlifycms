@@ -6,13 +6,11 @@ const contactReducer = (state = { dbInfo: false }, action) => {
     case types.PUT_CONTACT_FORM_SUCCESS:
       return {
         ...state,
-        // state: { dbInfo: action.status.dbInfo },
         state: { dbInfo: status.dbInfo },
       }
     case types.PUT_CONTACT_FORM_ERROR:
       return {
         ...state,
-        // state: { dbInfo: action.status.dbInfo },
         state: { dbInfo: status.dbInfo },
       }
     default:
