@@ -1,16 +1,16 @@
 import React from 'react'
 
-export default props => {
-  if (props.dbInfo === true) {
+export default ({ dbInfo, template }) => {
+  if (dbInfo === true) {
     return (
       <div>
-        <h3 key="submitSuccess">'Your submission was successful!'</h3>
+        <h3 key="submitSuccess">{template.notify.success}</h3>
       </div>
     )
-  } else if (props.dbInfo === 'error') {
+  } else if (dbInfo === 'error') {
     return (
       <div>
-        <h3 key="submitInvalid">'Your submission was unsuccessful!'</h3>
+        <h3 key="submitInvalid">{template.notify.error}</h3>
       </div>
     )
   }

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = ({ ui }) => ({
   visible: ui.footer.visible,
+  language: ui.language.visible,
 })
 
 class Footer extends Component {
@@ -41,15 +42,25 @@ class Footer extends Component {
           </ul>
           <p>RaicesPeruanas.com © Copyright 2004 - 2013</p>
           <p>
+          { this.props.language === 'en' ?
             <em>
-              Peruvian Events in Los Angeles. Promoting music and traditional dances
-              from Perú
+              Peruvian Events in Los Angeles. Promoting music and traditional dances from Perú
+            </em> :
+            <em>
+              Eventos peruanos en Los Ángeles. Promover la música y las danzas tradicionales de Perú
             </em>
+          }
           </p>
-          <p>
-            Web page created, updated and Maintained by:{' '}
-            <a href="http://blkmwtkns.co">Blake Watkins</a>
-          </p>
+          { this.props.language === 'en' ?
+            <p>
+              Web page created, updated and Maintained by:<br/>
+              <a href="http://blkmwtkns.co">Blake Watkins</a>
+            </p> :
+            <p>
+              Página web creada, actualizada y mantenida por:<br/>
+              <a href="http://blkmwtkns.co">Blake Watkins</a>
+            </p>
+          }
         </div>
       </footer>
     )
