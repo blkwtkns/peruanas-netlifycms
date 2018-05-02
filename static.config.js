@@ -51,7 +51,7 @@ function getPosts(type) {
 
 export default {
   preact: true,
-  siteRoot: 'https://raicesperuanas.com',
+  siteRoot: 'https://www.raicesperuanas.com',
   Document: ({ Html, Head, Body, children, siteData, renderMeta }) => (
     <Html lang="en-US">
       <Head>
