@@ -15,4 +15,6 @@ rating: '-3'
 
 **Angela Melani Ascarza** was born and raised in Huancayo, Peru. Her mother is from Huancayo and her father is from Ayacucho, she says because of this mix her Andean roots are deeply ingrained in her cultural identity. When she arrived to the USA she felt an emptiness inside because of the lack of Peruvian culture present in her life. Dancing with Raices Peruanas makes her feel closer to her family and friends she left in Peru, it fills her with joy to be able to represent her culture in a foreign country. 
 
+**Fernando Galvez** was born and raised in Huancayo, Peru. He joined Raices Peruanas to feel closer to his culture and country while living in Los Angeles, CA.
+
 **Brian Castillo** is from Los Angeles, CA, and his parents are from La Paz, Bolivia. He began dancing Bolivian folklorico in Orange County where he felt he could immerse himself in his culture like never before. Through his performances, his path crossed with Raices Peruanas and he was invited to dance alongside. Having learned his grandmother was from Peru, he decided to explore those roots as well and has been loving it ever since.
