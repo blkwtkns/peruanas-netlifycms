@@ -3,7 +3,7 @@ layout: blog
 title: Dancers of Raices Peruanas
 date: '2019-07-31T17:15:19-07:00'
 thumbnail: /uploads/67427254_1829300847215472_1393093481638920192_n.jpg
-rating: '0'
+rating: '5'
 ---
 **Melba Cubas** was born and raised in Chiclayo, Peru. She has won multiple Champion of Marinera Norteña and Tondero Piurano titles. She has a wide range of knowledge of Peruvian dances and also has experience dancing in Mexican folklorico groups. She represents Peruvian folklore through her dedication to teaching Peruvian dances to children and adults in Southern California and as lead dancer and co-choreographer in Raices Peruanas.
 
