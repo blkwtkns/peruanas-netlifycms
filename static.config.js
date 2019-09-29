@@ -4,6 +4,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import axios from 'axios'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+// import ExtractCssChunks from 'extract-css-chunks-webpack-plugin'
 import React from 'react'
 
 function getPosts(type) {
@@ -135,6 +136,11 @@ export default {
     ]
   },
   webpack: (config, { defaultLoaders, stage }) => {
+    config.plugins.push(
+      new ExtractTextPlugin({
+        filename: './[name].css'
+      })
+    );
     config.module.rules = [
       {
         oneOf: [
@@ -143,21 +149,23 @@ export default {
             use:
             stage === 'dev'
             ? [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }]
-            :
-            [
-              {
-                loader: 'css-loader',
-                options: {
-                  importLoaders: 1,
-                  minimize: true,
-                  sourceMap: false,
+            : ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: [
+                {
+                  loader: 'css-loader',
+                  options: {
+                    importLoaders: 1,
+                    minimize: true,
+                    sourceMap: false,
+                  },
                 },
-              },
-              {
-                loader: 'sass-loader',
-                options: { includePaths: ['src/'] },
-              },
-            ]
+                {
+                  loader: 'sass-loader',
+                  options: { includePaths: ['src/'] },
+                },
+              ]
+            }),
           },
           defaultLoaders.cssLoader,
           defaultLoaders.jsLoader,
