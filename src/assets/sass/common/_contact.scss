@@ -74,6 +74,23 @@
   }
 }
 
+.contact__direct {
+  margin: 10% 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  li {
+    font-size: 2vw;
+    @media only screen and (max-width: 768px) {
+      font-size: 5vw;
+    }
+    a {
+      color: red;
+      text-decoration: none;
+    }
+  }
+}
+
 .committeeInfo {
   text-align: center;
   h2 {

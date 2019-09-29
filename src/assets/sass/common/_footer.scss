@@ -29,7 +29,7 @@
     @media only screen and (max-width: 768px) {
       font-size: 3.7vw;
     }
-    margin-top: 2%;
+    margin-bottom: 2%;
     a {
       text-decoration: none;
       color: #5DBCD2;
@@ -54,7 +54,7 @@
 
 .socialLinks {
   display: flex;
-  width: 30%;
+  width: 20%;
   @media only screen and (max-width: 768px) {
     width: 60%;
   }

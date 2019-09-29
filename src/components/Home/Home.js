@@ -1,6 +1,7 @@
 // import { withRouteData } from 'react-static'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { RouteData } from 'react-static'
 import { footerAction, headerAction } from '../uiActions'
 
 class Home extends Component {
@@ -19,14 +20,17 @@ class Home extends Component {
 
   render () {
     return (
-      <section className="homeSection">
-        <div className="Intro">
-          <div className="greyBox">
-            <h1 className="intro-title">Raices Peruanas</h1>
-      {this.props.language === 'en' ? <h1 className="intro-subtitle">Dance, Music, Culture</h1> : <h1 className="intro-subtitle">Bailar, Musica, Cultura</h1> }
+      <RouteData render={({ home }) => (
+        <section className="homeSection">
+          <img className="home__background" src={home[0].data.thumbnail}></img>
+          <div className="Intro">
+            <div className="greyBox">
+              <h1 className="intro-title">Raices Peruanas</h1>
+        {this.props.language === 'en' ? <h1 className="intro-subtitle">Dance, Music, Culture</h1> : <h1 className="intro-subtitle">Bailar, Musica, Cultura</h1> }
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )} />
     )
   }
 }

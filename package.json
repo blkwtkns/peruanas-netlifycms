@@ -15,19 +15,19 @@
     "font-awesome": "^4.7.0",
     "gray-matter": "^3.1.1",
     "klaw": "^2.1.1",
-    "moment": "^2.20.1",
+    "moment": "^2.22.2",
     "node-sass": "^4.7.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-ga": "^2.5.0",
     "react-grid-layout": "^0.16.6",
-    "react-hot-loader": "^4.0.0-beta.21",
+    "react-hot-loader": "^4.3.12",
     "react-image-gallery": "^0.8.7",
     "react-markdown": "^3.1.0",
-    "react-moment": "^0.7.0",
+    "react-moment": "^0.7.9",
     "react-particles-js": "^2.1.2",
     "react-redux": "^5.0.7",
-    "react-router": "^4.2.0",
+    "react-router": "^4.3.1",
     "react-router-redux": "^4.0.8",
     "react-static": "^5.5.14",
     "redux": "^3.7.2",
@@ -36,8 +36,8 @@
     "sass-loader": "^6.0.7"
   },
   "devDependencies": {
-    "eslint-config-react-tools": "1.x.x",
+    "eslint-config-react-tools": "^1.1.6",
     "prettier": "^1.7.4",
-    "serve": "^6.1.0"
+    "serve": "^6.5.8"
   }
 }

@@ -3,6 +3,10 @@
 }
 
 .mainHistory {
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
   text-align: center;
   padding: 0 20%;
 }
@@ -44,5 +48,10 @@
   @media only screen and (max-width: 768px) {
     font-size: 7vw;
   }
+  margin-bottom: 5%;
+}
+
+.history__image {
+  // width: 50%;
   margin-bottom: 5%;
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 import { connect } from 'react-redux'
 
 const mapStateToProps = ({ ui }) => ({
@@ -51,14 +51,15 @@ class Footer extends Component {
           }
           </p>
           { this.props.language === 'en' ?
-            <p>
-              Web page created, updated and Maintained by:<br/>
-              <a href="http://blkmwtkns.co">Blake Watkins</a>
-            </p> :
-            <p>
-              Página web creada, actualizada y mantenida por:<br/>
-              <a href="http://blkmwtkns.co">Blake Watkins</a>
-            </p>
+            <Fragment>
+              <p>Web page created, updated and Maintained by:</p>
+              <p><a href="http://blkmwtkns.co">Blake Watkins</a></p>
+            </Fragment>
+            :
+            <Fragment>
+              <p>Página web creada, actualizada y mantenida por:</p>
+              <p><a href="http://blkmwtkns.co">Blake Watkins</a></p>
+            </Fragment>
           }
         </div>
       </footer>

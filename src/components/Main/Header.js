@@ -3,9 +3,9 @@ import { Link } from 'react-static'
 import { connect } from 'react-redux'
 import { languageAction } from '../uiActions'
 
-const englishLinks = ['about', 'presentations', 'dances', 'history', 'dancers', 'contact'];
+const englishLinks = ['about', 'presentations', 'dances', 'history', 'team', 'contact'];
 
-const spanishLinks = ['acerca de', 'presentaciones', 'bailes', 'historia', 'bailarines', 'contacto'];
+const spanishLinks = ['acerca de', 'presentaciones', 'bailes', 'historia', 'grupo', 'contacto'];
 
 class Header extends Component {
   constructor(props){

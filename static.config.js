@@ -67,21 +67,25 @@ export default {
   }),
   getRoutes: async () => {
     const presentations = await getPosts('presentations')
-    const images = await getPosts('home')
-    const dancers = await getPosts('dancers')
+    const aboutImages = await getPosts('aboutImages')
+    const home = await getPosts('home')
+    const team = await getPosts('team')
     const dances = await getPosts('dances')
     const history = await getPosts('history')
     const about = await getPosts('about')
     return [
       {
         path: '/',
-        component: 'src/components/Home/Home'
+        component: 'src/components/Home/Home',
+        getData: () => ({
+          home
+        }),
       },
       {
         path: '/about',
         component: 'src/components/About/About',
         getData: () => ({
-          images,
+          aboutImages,
           about
         }),
       },
@@ -93,18 +97,11 @@ export default {
         }),
       },
       {
-        path: '/dancers',
-        component: 'src/components/Dancers/Dancers',
+        path: '/team',
+        component: 'src/components/Team/Team',
         getData: () => ({
-          dancers,
+          team,
         }),
-        children: dancers.map(dancer => ({
-          path: `/dancer/${dancer.data.slug}`,
-          component: 'src/components/Dancers/Dancer',
-          getData: () => ({
-            dancer,
-          }),
-        })),
       },
       {
         path: '/dances',
@@ -146,22 +143,21 @@ export default {
             use:
             stage === 'dev'
             ? [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' }]
-            : ExtractTextPlugin.extract({
-              use: [
-                {
-                  loader: 'css-loader',
-                  options: {
-                    importLoaders: 1,
-                    minimize: true,
-                    sourceMap: false,
-                  },
+            :
+            [
+              {
+                loader: 'css-loader',
+                options: {
+                  importLoaders: 1,
+                  minimize: true,
+                  sourceMap: false,
                 },
-                {
-                  loader: 'sass-loader',
-                  options: { includePaths: ['src/'] },
-                },
-              ],
-            }),
+              },
+              {
+                loader: 'sass-loader',
+                options: { includePaths: ['src/'] },
+              },
+            ]
           },
           defaultLoaders.cssLoader,
           defaultLoaders.jsLoader,

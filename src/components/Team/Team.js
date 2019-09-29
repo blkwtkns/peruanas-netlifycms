@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { RouteData } from 'react-static'
-import AboutInfo from './AboutInfo'
 import { footerAction, headerAction } from '../uiActions'
+import Member from './Member'
 
-class About extends Component {
-
+class Team extends Component {
   componentDidMount () {
     this.props.footerVisibility(true)
     this.props.headerStasis(false)
@@ -13,25 +12,27 @@ class About extends Component {
 
   render () {
     return (
-      <RouteData render={({ aboutImages, about }) => (
+      <RouteData render={({ team }) => (
         <section className="mainSection">
-          <AboutInfo
-            images={aboutImages}
-            info={about[0].data}
-            language={this.props.language}
-          />
+          <div className="presentation__container">
+            <h1 className="pres-header">Grupo Raices Peruanas</h1>
+            <ul>
+              {team.map((member, id) => (
+                <li key={id} className="presentation">
+                  <Member {...member.data} />
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
       )} />
     )
   }
 }
 
-const mapStateToProps = ({ ui }) => {
-  return {
-    visible: ui.footer.visible,
-    language: ui.language.visible,
-  }
-}
+const mapStateToProps = ({ ui }) => ({
+  visible: ui.footer.visible,
+})
 
 const mapDispatchToProps = dispatch => ({
   footerVisibility: visible => dispatch(footerAction(visible)),
@@ -41,4 +42,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(About)
+)(Team)

@@ -15,13 +15,19 @@ class History extends Component {
   render () {
     return (
       <RouteData render={({ history }) => {
-        const newHistory = history[0].data;
+        const {
+          thumbnail,
+          english,
+          espanol,
+          englishTitle,
+          espanolTitle,
+        } = history[0].data;
         return (
           <section className="mainSection">
             <div className="history__container">
             { this.props.language === 'en' ?
-              <EngHistory histContent={newHistory.english} histTitle={newHistory.englishTitle}/> :
-              <EspHistory histContent={newHistory.espanol} histTitle={newHistory.espanolTitle}/>}
+              <EngHistory histContent={english} histTitle={englishTitle} image={thumbnail}/> :
+              <EspHistory histContent={espanol} histTitle={espanolTitle} image={thumbnail}/>}
             </div>
           </section>
       )}} />
