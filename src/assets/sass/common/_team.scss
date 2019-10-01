@@ -1,0 +1,46 @@
+.member {
+  display: flex;
+  margin: 3% 0;
+  flex-direction: row;
+  -webkit-box-shadow: 0 6px 10px 0px black;
+  -moz-box-shadow: 0 6px 10px 0px black;
+  box-shadow: 0 6px 10px 0px black;
+}
+
+.member-media {
+  width: 30%;
+  .event-image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.memberData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 2vw;
+    @media only screen and (max-width: 768px) {
+      font-size: 3vw;
+    }
+  width: 70%;
+  color: black;
+  padding: 5% 0;
+}
+
+.team__container {
+  padding: 0% 15%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.team {
+  display: block;
+}
+
+.team-header {
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 5%;
+}

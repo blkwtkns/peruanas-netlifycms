@@ -15,7 +15,7 @@ class Home extends Component {
     this.props.footerVisibility(true)
     this.props.headerStasis(false)
 
-    document.getElementById('main-container').style.paddingBottom = '23vh';
+    // document.getElementById('main-container').style.paddingBottom = '23vh';
   }
 
   render () {
