@@ -1,10 +1,18 @@
-import React, { Fragment, Component } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 const mapStateToProps = ({ ui }) => ({
   visible: ui.footer.visible,
   language: ui.language.visible,
 })
+
+const style = {
+  display: 'none',
+}
+
+const PeruSpan = () => (
+  <span style={{color:'red'}}>Perú</span>
+)
 
 class Footer extends Component {
   constructor (props) {
@@ -41,26 +49,17 @@ class Footer extends Component {
           </ul>
           <p>RaicesPeruanas.com © Copyright 2004 - 2013</p>
           <p>
-          { this.props.language === 'en' ?
-            <em>
-              Peruvian Events in Los Angeles. Promoting music and traditional dances from Perú
-            </em> :
-            <em>
-              Eventos peruanos en Los Ángeles. Promover la música y las danzas tradicionales de Perú
-            </em>
-          }
+            { this.props.language === 'en' ?
+              <em>
+                Peruvian Events in Los Angeles. Promoting music and traditional dances from <PeruSpan/>
+              </em> :
+              <em>
+                Eventos peruanos en Los Ángeles. Promover la música y las danzas tradicionales de <PeruSpan/>
+              </em>
+            }
           </p>
-          { this.props.language === 'en' ?
-            <Fragment>
-              <p>Web page created, updated and Maintained by:</p>
-              <p><a href="http://blkmwtkns.co">Blake Watkins</a></p>
-            </Fragment>
-            :
-            <Fragment>
-              <p>Página web creada, actualizada y mantenida por:</p>
-              <p><a href="http://blkmwtkns.co">Blake Watkins</a></p>
-            </Fragment>
-          }
+
+          <p style={style} >Created by <a href="http://blkmwtkns.co">Blake Watkins</a></p>
         </div>
       </footer>
     )

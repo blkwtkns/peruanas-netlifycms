@@ -13,9 +13,8 @@
 @import 'common/home';
 @import 'common/about';
 @import 'common/dances';
-@import 'common/dancers';
 @import 'common/presentations';
-// @import 'common/event';
+@import 'common/team';
 @import 'common/history';
 @import 'common/contact';
 @import 'common/404';
@@ -51,7 +50,7 @@ body {
 
 #main-container {
   position: relative;
-  padding-bottom: 23vh;
+  // padding-bottom: 23vh;
 }
 
 #main-container-no-foot {

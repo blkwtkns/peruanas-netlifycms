@@ -14,11 +14,11 @@ class Team extends Component {
     return (
       <RouteData render={({ team }) => (
         <section className="mainSection">
-          <div className="presentation__container">
-            <h1 className="pres-header">Grupo Raices Peruanas</h1>
+          <div className="team__container">
+            <h1 className="team-header">Grupo Raices Peruanas</h1>
             <ul>
               {team.map((member, id) => (
-                <li key={id} className="presentation">
+                <li key={id} className="team">
                   <Member {...member.data} />
                 </li>
               ))}
