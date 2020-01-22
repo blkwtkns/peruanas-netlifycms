@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Lead Dancer
-date: '2020-01-20T19:21:02-08:00'
+date: '2020-01-21T21:58:00-08:00'
 thumbnail: /uploads/melba.jpg
 name: Melba Cubas
 about: >-
