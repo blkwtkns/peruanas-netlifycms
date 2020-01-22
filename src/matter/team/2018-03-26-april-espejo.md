@@ -2,7 +2,7 @@
 layout: team
 title: Dancer & Administrative Assistant
 date: 2016-08-14T00:45:43.212Z
-thumbnail: /uploads/april-espejolll_-171-edit-v2-1-.jpg
+thumbnail: /uploads/april-edited.jpg
 name: April Espejo
 about: >-
   Born and raised in South Pasadena, CA, Edith has been dancing since she was 4
