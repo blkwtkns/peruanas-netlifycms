@@ -38,6 +38,6 @@
   "devDependencies": {
     "eslint-config-react-tools": "^1.1.6",
     "prettier": "^1.7.4",
-    "serve": "^6.5.8"
+    "serve": "^7.1.3"
   }
 }
