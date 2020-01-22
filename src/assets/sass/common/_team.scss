@@ -9,7 +9,7 @@
 
 .member-media {
   width: 30%;
-  .event-image {
+  .member-image {
     height: 100%;
     width: 100%;
   }
@@ -25,7 +25,10 @@
     }
   width: 70%;
   color: black;
-  padding: 5% 0;
+  padding: 5%;
+  .member-info {
+    padding: 2% 0;
+  }
 }
 
 .team__container {
